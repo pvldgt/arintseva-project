@@ -1,0 +1,57 @@
+@use 'src/scss/base';
+
+.header {
+    background-color: base.$blue;
+    padding: 1rem 0;
+    margin: 0;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+
+
+    &__logo {
+        font-family: base.$header-font;
+        color: base.$pink-accent;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-left: 3%;
+        flex: 1;
+        border: solid 3px rgb(255, 255, 255);
+        border-radius: 20px;
+        background-color: rgb(244, 250, 255);
+    }
+
+    &__wrapper {
+        flex: 3;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        padding: 1%;
+        list-style: none;
+    }
+
+    &__link {
+        font-family: base.$regular-font;
+        color: base.$light;
+        font-size: 1rem;
+        font-weight: 700;
+        // display: block;
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        color: base.$pink-accent;
+        text-decoration: underline;
+    }
+
+}

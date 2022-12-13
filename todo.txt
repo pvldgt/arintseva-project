@@ -1,0 +1,10 @@
+research 'focus' / vs 'active'?
+make an active focused element stand out somehow
+'add english/russian' flags to the menu
+add burger button to the menu / js
+read how to make the website accessible - adding some attributes 
+play with the brand ? 
+
+
+
+add media queries / make the website responsive 
