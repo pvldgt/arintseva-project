@@ -5,6 +5,8 @@ add burger button to the menu / js
 read how to make the website accessible - adding some attributes 
 play with the brand ? 
 
+make the navbar stick to the top
+
 
 
 add media queries / make the website responsive 

@@ -8,71 +8,32 @@ body {
 }
 
 body>* {
-  margin: 3% 5%;
+  padding: 2% 5%;
 }
 
-.greeting {
+.resume {
+  background-color: base.$blue;
+  @include partials.section(resume);
+  // &__section-title {
+  //   @include partials.section-title;
+  // }
+
+  // &__subheader {
+  //   @include partials.subheader;
+  // }
+
+  // &__subsub {
+  //   @include partials.subsub;
+  // }
+
+}
+
+.english {
   background-color: base.$white;
+  @include partials.section(english);
+}
 
-  @media (min-width: 1080px) {
-    max-width: 1080px;
-    margin: 3% auto;
-  }
-
-
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 5%;
-    justify-content: center;
-    align-content: center;
-    gap: 1%
-  }
-
-  &__grid-text {
-    width: 100%
-  }
-
-  &__grid-text>* {
-    padding: 2%;
-  }
-
-  h1 {
-    color: base.$header;
-    font-family: base.$header-font;
-  }
-
-  h2 {
-    color: base.$regular;
-    font-family: base.$regular-font;
-    padding: 2% 5%;
-  }
-
-  h3 {
-    color: base.$light;
-    font-family: base.$regular-font;
-  }
-
-  &__grid-img {
-    align-self: center;
-    justify-self: center;
-    width: 80%;
-  }
-
-  @media (max-width: 1020px) {
-    max-width: 680px;
-    // how to center it?
-
-    &__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 5%;
-      justify-content: center;
-      align-content: center;
-
-
-    }
-
-  }
+.english-feedback {
+  background-color: base.$yellow;
+  @include partials.section(english-feedback);
 }

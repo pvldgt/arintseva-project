@@ -1,0 +1,91 @@
+@use 'src/scss/base';
+
+.greeting {
+    background-color: base.$white;
+
+    @media (min-width: 1080px) {
+        max-width: 1080px;
+        margin: 3% auto;
+    }
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5%;
+        justify-content: center;
+        align-content: center;
+        gap: 1%
+    }
+
+    &__grid-text {
+        width: 100%
+    }
+
+    &__grid-text>* {
+        padding: 2%;
+    }
+
+    h1 {
+        color: base.$header;
+        font-family: base.$header-font;
+    }
+
+    h2 {
+        color: base.$regular;
+        font-family: base.$regular-font;
+        padding: 2% 5%;
+    }
+
+    h3 {
+        color: base.$light;
+        font-family: base.$regular-font;
+    }
+
+    &__grid-img {
+        align-self: center;
+        justify-self: center;
+        width: 80%;
+    }
+
+    &__grid-text-button {
+        color: base.$regular;
+        font-family: base.$regular-font;
+        padding: 2%;
+        text-decoration: none;
+        border: solid 1px base.$regular;
+        border-radius: 20px;
+    }
+
+    &__grid-text-button:hover {
+        background-color: base.$pink-accent;
+
+        .greeting__telegram-logo {
+            color: base.$white;
+        }
+    }
+
+    h3#{&}__button {
+        margin-top: 4%;
+    }
+
+    &__telegram-logo {
+        color: base.$telegram;
+    }
+
+    @media (max-width: 1020px) {
+        max-width: 680px;
+        // how to center it?
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 5%;
+            justify-content: center;
+            align-content: center;
+
+
+        }
+
+    }
+}

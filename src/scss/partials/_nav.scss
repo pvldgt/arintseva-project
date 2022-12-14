@@ -4,16 +4,13 @@
     background-color: base.$blue;
     padding: 1rem 0;
     margin: 0;
-
 }
 
 .navbar {
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
-
-
-
+    
     &__logo {
         font-family: base.$header-font;
         color: base.$pink-accent;
