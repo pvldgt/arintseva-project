@@ -1,7 +1,10 @@
 @use 'src/scss/base';
 
 .header {
-    background-color: base.$blue;
+    // background: rgb(255, 228, 247);
+    // background: radial-gradient(circle, rgba(255, 228, 247, 0.6530987394957983) 0%, rgba(209, 209, 255, 1) 47%, rgba(200, 209, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
+    background: rgb(255, 142, 221);
+    background: radial-gradient(circle, rgba(255, 142, 221, 0.6530987394957983) 0%, rgba(174, 147, 255, 1) 47%, rgba(155, 172, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
     padding: 1rem 0;
     margin: 0;
 }
@@ -10,7 +13,9 @@
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
-    
+
+
+    // The ratio of logo to links is 1 to 4
     &__logo {
         font-family: base.$header-font;
         color: base.$pink-accent;
@@ -20,16 +25,20 @@
         flex: 1;
         border: solid 3px rgb(255, 255, 255);
         border-radius: 20px;
-        background-color: rgb(244, 250, 255);
+        background-color: rgba(244, 250, 255, 0.483);
+        // background: rgb(255, 228, 247);
+        // background: radial-gradient(circle, rgba(255, 228, 247, 0.6530987394957983) 0%, rgba(209, 209, 255, 1) 47%, rgba(200, 209, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
+
     }
 
     &__wrapper {
-        flex: 3;
+        flex: 4;
     }
 
     &__menu {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     &__item {
@@ -42,13 +51,101 @@
         color: base.$light;
         font-size: 1rem;
         font-weight: 700;
-        // display: block;
         text-decoration: none;
     }
 
     &__link:hover {
         color: base.$pink-accent;
         text-decoration: underline;
+    }
+
+
+    // By default the hamburger is hidden
+    &__hamburger {
+        display: none;
+        margin-right: 1%;
+        border: none;
+        text-decoration: none;
+        background: none;
+    }
+
+    // Styling the lines that appear as the hamburger button
+    &__hamburger-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: base.$header;
+    }
+
+    // Make it responsive, the hamburger menu will appear once the screen is mobile size 
+    @media only screen and (max-width: 950px) {
+
+        // Change the logo to wrapper ratio in the flexbox
+
+        &__logo {
+            font-size: 2rem;
+            flex: 2;
+        }
+
+        &__wrapper {
+            flex: 1;
+        }
+
+        // Now that the size of the screen is smaller we make the hamburger button visible
+        &__hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        // Make the menu vertical ith columns and initially hide it off the screen 
+        &__menu {
+            position: fixed;
+            left: 110%;
+            top: 5.5rem;
+            flex-direction: column;
+            background-color: base.$yellow;
+            width: 80%;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 17px rgba(0, 0, 0, 0.207);
+        }
+
+        // Bring the menu to the screen once the user presses the hamburger
+        &__menu.navbar--active {
+            left: 10%;
+        }
+
+        &__item {
+            padding: 1%;
+            list-style: none;
+            margin: 1.4rem 0;
+        }
+
+        // The --active modifier brings out the mobile menu and turns the hamburger lines into a cross
+        &__menu.navbar--active {
+            left: 10%;
+        }
+
+        // Modify the hamburger lines
+        // Line 2
+        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        // Line 1
+        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        // Line 3
+        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+
+        }
     }
 
 }

@@ -1,12 +1,26 @@
-research 'focus' / vs 'active'?
-make an active focused element stand out somehow
-'add english/russian' flags to the menu
-add burger button to the menu / js
-read how to make the website accessible - adding some attributes 
-play with the brand ? 
+[]research 'focus' / vs 'active'?
+[] make an active focused element stand out somehow, style it according to the general design color palette etc
+[x] 'add english/russian' flags to the menu
+[] add burger button to the menu / js
+[] read how to make the website accessible - adding some attributes 
+[] play with the brand ? 
 
-make the navbar stick to the top
+[] make the navbar stick to the top and each of the link to highlight depending on where on the landing page user is 
 
 
 
-add media queries / make the website responsive 
+[] add media queries / make the website responsive 
+
+
+[x] standrad .section 
+[x] standard subheader with before and after 
+
+[x] make the button lines into a cross once it's pressed
+[] make the mobile nav button lines Rounded
+[] make the mobile nav bars into a button and accessible 
+
+[] delete the link decoration for flags (add a separate modifier class?) and make them bigger
+
+[] add dimming to the background color of the greeting when mobile menu is open 
+
+[] make the menu appear from top right, not just right 

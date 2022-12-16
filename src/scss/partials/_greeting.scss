@@ -2,20 +2,22 @@
 
 .greeting {
     background-color: base.$white;
+    margin: 3% auto;
 
     @media (min-width: 1080px) {
-        max-width: 1080px;
-        margin: 3% auto;
+        max-width: 1380px;
+
     }
 
 
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 5%;
+        padding: 3%;
         justify-content: center;
         align-content: center;
-        gap: 1%
+        gap: 1%;
+
     }
 
     &__grid-text {
@@ -45,7 +47,7 @@
     &__grid-img {
         align-self: center;
         justify-self: center;
-        width: 80%;
+        width: 100%;
     }
 
     &__grid-text-button {

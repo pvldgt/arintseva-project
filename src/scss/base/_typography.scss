@@ -13,7 +13,16 @@ h3 {
     font-weight: 400;
 }
 
+@mixin normal-text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 
 $header-font: "Yanone Kaffeesatz", sans-serif;
 
 $regular-font: "Montserrat Alternates", sans-serif;
+
+$rounded-font: "M PLUS Rounded 1c", sans-serif;
+$merriweather-font: "Merriweather", serif;
+$charis-font: "Charis SIL", serif;
