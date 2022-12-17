@@ -1,12 +1,17 @@
 @use 'src/scss/base';
 
-.header {
+// Using the ID here to overwrite the padding rules of .parent-for-sticky>* 
+#header {
     // background: rgb(255, 228, 247);
     // background: radial-gradient(circle, rgba(255, 228, 247, 0.6530987394957983) 0%, rgba(209, 209, 255, 1) 47%, rgba(200, 209, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
     background: rgb(255, 142, 221);
-    background: radial-gradient(circle, rgba(255, 142, 221, 0.6530987394957983) 0%, rgba(174, 147, 255, 1) 47%, rgba(155, 172, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
-    padding: 1rem 0;
+    // The variant with transparency 
+    // background: radial-gradient(circle, rgba(255, 142, 221, 0.6530987394957983) 0%, rgba(174, 147, 255, 1) 47%, rgba(155, 172, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
+    background: radial-gradient(circle, rgb(255, 142, 221) 0%, rgb(174, 147, 255) 47%, rgb(155, 172, 255) 79%, rgb(163, 240, 255) 100%);
+    padding: 0.5rem 0;
     margin: 0;
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
@@ -21,6 +26,8 @@
         color: base.$pink-accent;
         font-size: 3rem;
         font-weight: 700;
+        // Give this padding so that the border doesn't get too close on some screen sizes
+        padding: 5px 10px;
         margin-left: 3%;
         flex: 1;
         border: solid 3px rgb(255, 255, 255);
@@ -28,7 +35,6 @@
         background-color: rgba(244, 250, 255, 0.483);
         // background: rgb(255, 228, 247);
         // background: radial-gradient(circle, rgba(255, 228, 247, 0.6530987394957983) 0%, rgba(209, 209, 255, 1) 47%, rgba(200, 209, 255, 0.804359243697479) 79%, rgba(163, 240, 255, 0.44021358543417366) 100%);
-
     }
 
     &__wrapper {
@@ -37,28 +43,63 @@
 
     &__menu {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
     }
 
     &__item {
-        padding: 1%;
+        padding: 0.9%;
         list-style: none;
     }
 
     &__link {
-        font-family: base.$regular-font;
-        color: base.$light;
-        font-size: 1rem;
+        font-family: base.$subheader-font;
+        color: base.$header;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+
+    }
+
+    // Create an invisible line under the link
+    &__link::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.4s ease-in-out;
+    }
+
+    // Make it visible when the user hovers 
+    &__link:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    // Make the link text white and bold on hover 
+    &__link:hover {
+        color: base.$white;
         font-weight: 700;
+    }
+
+    // Add this to make sure the flags don't get any underline 
+    &--flag {
+        font-size: 2rem;
+    }
+
+    &--flag:hover::before {
+        visibility: hidden;
+    }
+
+    &--flag:hover {
         text-decoration: none;
     }
-
-    &__link:hover {
-        color: base.$pink-accent;
-        text-decoration: underline;
-    }
-
 
     // By default the hamburger is hidden
     &__hamburger {
@@ -144,7 +185,38 @@
         // Line 3
         &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
+        }
 
+
+        // This makes the hamburger links dark, bold and with the underline on hover
+        &__link:hover {
+            color: base.$header;
+            font-weight: 700;
+        }
+
+        &__link::before {
+            background-color: base.$header;
+        }
+    }
+
+    // Media query for middle size screen that was making the logo too big and made the header take too much space 
+    @media only screen and (min-width: 951px) and (max-width: 1290px) {
+        &__logo {
+            font-size: 1.6rem;
+            flex: 1;
+        }
+
+        &__wrapper {
+            flex: 5;
+        }
+
+        &__link {
+            font-size: 0.8rem;
+            font-weight: 6400;
+        }
+
+        &--flag {
+            font-size: 1.3rem;
         }
     }
 

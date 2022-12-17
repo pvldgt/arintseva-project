@@ -1,18 +1,18 @@
 @use 'base';
 @use 'partials';
 
-
 body {
   text-align: center;
 }
 
-body>* {
+.parent-for-sticky>* {
   padding: 2% 3%;
 }
 
 .resume {
   background-color: base.$blue;
   @include partials.section(resume);
+
 }
 
 .english {
@@ -37,11 +37,11 @@ body>* {
 
 footer {
   background-color: base.$light-blue;
-  font-family: base.$header-font;
+  font-family: base.$merriweather-font;
   @include base.normal-text;
 }
 
 .lorem {
   @include base.normal-text;
-  font-family: base.$merriweather-font;
+
 }

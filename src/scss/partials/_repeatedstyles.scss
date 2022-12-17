@@ -2,7 +2,7 @@
 
 // create 3 mixins that will be used to style the heading and subheading 
 @mixin section-title {
-    padding: 2.5%;
+    padding: 1.5% 2.5%;
 
     &::before,
     &::after {
@@ -26,24 +26,29 @@
 }
 
 @mixin subsub {
-    font-family: base.$regular-font;
+    font-family: base.$subheader-font;
     font-size: 1.5rem;
     font-weight: 400;
     color: base.$light;
     padding: 0.5%;
 }
 
-// mixin that combines 3 previous mixins to make the code DRY
+// mixin that combines 3 previous mixins to make the code DRY and styles the container 
 @mixin section ($class) {
     .#{$class}__section-title {
         @include section-title;
     }
-    
+
     .#{$class}__subheader {
         @include subheader;
     }
 
     .#{$class}__subsub {
         @include subsub;
+    }
+
+    .#{$class}__container {
+        padding: 0.5rem;
+        font-family: base.$merriweather-font;
     }
 }

@@ -24,3 +24,12 @@ function closeMenu() {
     hamburger.classList.remove("navbar--active");
     menu.classList.remove("navbar--active");
 }
+
+
+// The --active-link modifier adds the "hover"-like state to the link from the navbar 
+// when the user scrolls through the corresponding section 
+
+// Default --active-link  on #resume
+// document.querySelector("#resume-link").classList.add("navbar--active-link");
+// Need to read more 
+// https://codepen.io/ifabre/pen/qBZarQ

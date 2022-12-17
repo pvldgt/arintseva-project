@@ -35,13 +35,13 @@
 
     h2 {
         color: base.$regular;
-        font-family: base.$regular-font;
+        font-family: base.$subheader-font;
         padding: 2% 5%;
     }
 
     h3 {
         color: base.$light;
-        font-family: base.$regular-font;
+        font-family: base.$subheader-font;
     }
 
     &__grid-img {
@@ -52,7 +52,7 @@
 
     &__grid-text-button {
         color: base.$regular;
-        font-family: base.$regular-font;
+        font-family: base.$subheader-font;
         padding: 2%;
         text-decoration: none;
         border: solid 1px base.$regular;
@@ -60,6 +60,7 @@
     }
 
     &__grid-text-button:hover {
+        color: base.$white;
         background-color: base.$pink-accent;
 
         .greeting__telegram-logo {
