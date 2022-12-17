@@ -144,13 +144,14 @@
         // Make the menu vertical ith columns and initially hide it off the screen 
         &__menu {
             position: fixed;
+            // Keep the menu off screen for now with left and top values
             left: 110%;
-            top: 5.5rem;
+            top: -5%;
             flex-direction: column;
             background-color: base.$yellow;
             width: 80%;
             border-radius: 10px;
-            transition: 0.3s;
+            transition: 0.4s;
             box-shadow:
                 0 10px 17px rgba(0, 0, 0, 0.207);
         }
@@ -168,7 +169,9 @@
 
         // The --active modifier brings out the mobile menu and turns the hamburger lines into a cross
         &__menu.navbar--active {
+            // This brings the menu to the screen from top right corner
             left: 10%;
+            top: 12%;
         }
 
         // Modify the hamburger lines
@@ -188,7 +191,7 @@
         }
 
 
-        // This makes the hamburger links dark, bold and with the underline on hover
+        // This makes the hamburger links dark, bold and with the underline on hover. 
         &__link:hover {
             color: base.$header;
             font-weight: 700;
