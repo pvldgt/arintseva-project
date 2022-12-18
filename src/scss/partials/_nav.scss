@@ -12,6 +12,8 @@
     margin: 0;
     position: sticky;
     top: 0;
+    // this is needed because otherwise absolutely and relatively positioned elements in the resume see though the header
+    z-index: 1
 }
 
 .navbar {
@@ -86,6 +88,16 @@
     &__link:hover {
         color: base.$white;
         font-weight: 700;
+    }
+
+    // Style the active link 
+    &__link:hover:active {
+
+        // For now choosing this style - the underline moves to the top when :active
+        &::before {
+            transition: none;
+            bottom: 25px;
+        }
     }
 
     // Add this to make sure the flags don't get any underline 

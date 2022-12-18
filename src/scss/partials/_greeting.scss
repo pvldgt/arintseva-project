@@ -62,6 +62,7 @@
     &__grid-text-button:hover {
         color: base.$white;
         background-color: base.$pink-accent;
+        border: none;
 
         .greeting__telegram-logo {
             color: base.$white;
@@ -78,7 +79,6 @@
 
     @media (max-width: 1020px) {
         max-width: 680px;
-        // how to center it?
 
         &__grid {
             display: grid;

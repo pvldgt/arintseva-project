@@ -1,17 +1,18 @@
 @use 'src/scss/base';
 
-// create 3 mixins that will be used to style the heading and subheading 
+// Create 3 mixins that will be used to style the heading and subheading 
 @mixin section-title {
     padding: 1.5% 2.5%;
 
     &::before,
     &::after {
+        // content: "⸻";
         content: "⸻";
+        color: base.$header;
         display: block;
         font-family: base.$header-font;
         font-size: 2rem;
         font-weight: 500;
-        color: base.$header;
         padding: 1%;
     }
 }
@@ -33,7 +34,7 @@
     padding: 0.5%;
 }
 
-// mixin that combines 3 previous mixins to make the code DRY and styles the container 
+// Mixin that combines 3 previous mixins to make the code DRY and styles the container 
 @mixin section ($class) {
     .#{$class}__section-title {
         @include section-title;

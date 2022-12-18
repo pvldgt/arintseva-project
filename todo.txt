@@ -3,7 +3,6 @@
 [] read how to make the website accessible - adding some attributes 
 [] each of the link should get highlighted depending on where the user scrolls
 [] add dimming to the background color of the greeting when mobile menu is open 
-[] make the menu appear from top right, not just right 
 [] English and Russian versions, link rel canonical and alternate 
 [] add proper comments to everything 
 [] add media queries / make the website responsive 
@@ -22,6 +21,7 @@
 [x] delete the link decoration for flags (add a separate modifier class?) and make them bigger
 [x] each section should consist of header and then div with content 
 [x] make black bold for mobile menu links 
+[x] make the menu appear from top right, not just right 
 
 
 
