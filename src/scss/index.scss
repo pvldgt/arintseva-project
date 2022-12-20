@@ -12,7 +12,7 @@ body {
 .resume {
   background-color: base.$blue;
   // This sets the styles of the whole section 
-  @include partials.section(resume);
+  @include base.section(resume);
 
   &__container {
     display: flex;
@@ -93,22 +93,22 @@ body {
 
 .english {
   background-color: base.$white;
-  @include partials.section(english);
+  @include base.section(english);
 }
 
 .english-feedback {
   background-color: base.$yellow;
-  @include partials.section(english-feedback);
+  @include base.section(english-feedback);
 }
 
 .psychology {
   background-color: base.$pink-background;
-  @include partials.section(psychology);
+  @include base.section(psychology);
 }
 
 .psychology-feedback {
   background-color: base.$blue;
-  @include partials.section(psychology-feedback);
+  @include base.section(psychology-feedback);
 }
 
 footer {

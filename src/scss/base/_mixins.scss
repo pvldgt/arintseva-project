@@ -1,4 +1,6 @@
-@use 'src/scss/base';
+@use 'colors';
+@use 'typography';
+
 
 // Create 3 mixins that will be used to style the heading and subheading 
 @mixin section-title {
@@ -8,9 +10,9 @@
     &::after {
         // content: "⸻";
         content: "⸻";
-        color: base.$header;
+        color: colors.$header;
         display: block;
-        font-family: base.$header-font;
+        font-family: typography.$header-font;
         font-size: 2rem;
         font-weight: 500;
         padding: 1%;
@@ -18,19 +20,19 @@
 }
 
 @mixin subheader {
-    font-family: base.$header-font;
+    font-family: typography.$header-font;
     font-size: 3rem;
     font-weight: 500;
-    color: base.$header;
+    color: colors.$header;
     padding: 0.5%;
 
 }
 
 @mixin subsub {
-    font-family: base.$subheader-font;
+    font-family: typography.$subheader-font;
     font-size: 1.5rem;
     font-weight: 400;
-    color: base.$light;
+    color: colors.$light;
     padding: 0.5%;
 }
 
@@ -50,6 +52,6 @@
 
     .#{$class}__container {
         padding: 0.5rem;
-        font-family: base.$merriweather-font;
+        font-family: typography.$merriweather-font;
     }
 }
