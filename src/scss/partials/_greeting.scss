@@ -14,16 +14,22 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 3%;
-        justify-content: center;
-        align-content: center;
+        // justify-content: center;
+        // align-content: center;
         gap: 1%;
 
     }
 
+    // Add display flex and center so that the text bits take as much vertical space as the image
     &__grid-text {
-        width: 100%
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        align-content: center;
     }
 
+    // Space around the text elements 
     &__grid-text>* {
         padding: 2%;
     }
@@ -70,7 +76,7 @@
     }
 
     h3#{&}__button {
-        margin-top: 4%;
+        margin: 4.5% 0%;
     }
 
     &__telegram-logo {
