@@ -1,0 +1,6 @@
+@use 'src/scss/base';
+
+footer {
+    background-color: base.$light-blue;
+    @include base.normal-text;
+}

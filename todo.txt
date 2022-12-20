@@ -1,11 +1,13 @@
-[] research 'focus' / vs 'active'?
-[] make an active focused element stand out somehow, style it according to the general design color palette etc
-[] read how to make the website accessible - adding some attributes 
+[] make the focused element stand out somehow, style it according to the general design color palette etc
 [] each of the link should get highlighted depending on where the user scrolls
-[] add dimming to the background color of the greeting when mobile menu is open 
+[] read how to make the website accessible - adding some attributes 
+[1] add dimming to the background color of the greeting when mobile menu is open 
 [] English and Russian versions, link rel canonical and alternate 
 [] add proper comments to everything 
 [] add media queries / make the website responsive 
+[?] started turning headings h1 h2 h3 etc into classes. do these mixins belong in typography or mixins partials? 
+[] create _responisve and move create media query sizes 
+
 
 [?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
 
@@ -22,6 +24,14 @@
 [x] each section should consist of header and then div with content 
 [x] make black bold for mobile menu links 
 [x] make the menu appear from top right, not just right 
+[x] research 'focus' / vs 'active'
+[x] added :active on navbar links 
+20.12
+[x] move mixins into the base
+[x] create separate partials for each section 
+[x] remove header element as it was redundant
+[x] make the nav bar sticky without parent-for-sticky
+[x] decided to keep the original line-height set in the reset partial even in the resume section, as it looks the best 
 
 
 

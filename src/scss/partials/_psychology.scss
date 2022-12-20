@@ -1,0 +1,6 @@
+@use 'src/scss/base';
+
+.psychology {
+    background-color: base.$pink-background;
+    @include base.section(psychology);
+}

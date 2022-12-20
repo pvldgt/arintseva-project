@@ -1,0 +1,72 @@
+@use 'src/scss/base';
+
+.resume {
+    background-color: base.$blue;
+    // This sets the styles of the whole section 
+    @include base.section(resume);
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__column {
+        padding: 0 3%;
+        text-align: left;
+        // border: solid 1px black;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        width: 50%;
+        max-width: 100%;
+    }
+
+    &__item {
+        padding: 0 0 20px 30px;
+        list-style: inside;
+        border-left: 4px solid base.$pink-background;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    // h3 is a header in the resume 
+    h3 {
+        font-weight: 700;
+        color: base.$pink-accent;
+        font-family: base.$subheader-font;
+        margin: 2% 0;
+        padding: 1.5% 0;
+    }
+
+    // h4 is a subheader in the resume 
+    h4 {
+        color: base.$blue-green;
+        font-family: base.$merriweather-font;
+        margin: 0 0 1%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            left: -42px;
+            top: -1px;
+            background: base.$pink-accent;
+            border: 2px solid base.$pink-background;
+        }
+    }
+
+    // h5 is the years in the resume
+    h5 {
+        margin: 0 0 10px;
+        padding: 5px 15px;
+        display: inline-block;
+        color: base.$header-font;
+        background-color: base.$light-blue;
+        font-family: base.$merriweather-font;
+    }
+}

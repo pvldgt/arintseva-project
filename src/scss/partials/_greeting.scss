@@ -9,7 +9,6 @@
 
     }
 
-
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -34,12 +33,14 @@
         padding: 2%;
     }
 
-    h1 {
+    &__heading {
+        @include base.main-heading;
         color: base.$header;
         font-family: base.$header-font;
     }
 
-    h2 {
+    &__sub-heading {
+        @include base.sub-heading;
         color: base.$regular;
         font-family: base.$subheader-font;
         padding: 2% 5%;

@@ -1,0 +1,6 @@
+@use 'src/scss/base';
+
+.psychology-feedback {
+    background-color: base.$blue;
+    @include base.section(psychology-feedback);
+}

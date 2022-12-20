@@ -1,0 +1,6 @@
+@use 'src/scss/base';
+
+.english {
+    background-color: base.$white;
+    @include base.section(english);
+}
