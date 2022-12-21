@@ -36,19 +36,18 @@
     &__heading {
         @include base.main-heading;
         color: base.$header;
-        font-family: base.$header-font;
     }
 
     &__sub-heading {
         @include base.sub-heading;
         color: base.$regular;
-        font-family: base.$subheader-font;
         padding: 2% 5%;
     }
 
     h3 {
+        @include base.sub-text;
         color: base.$light;
-        font-family: base.$subheader-font;
+
     }
 
     &__grid-img {

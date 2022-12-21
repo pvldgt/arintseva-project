@@ -22,29 +22,38 @@
     }
 
     &__item {
+        // The padding keeps space between the resume text and the border on the left
         padding: 0 0 20px 30px;
         list-style: inside;
         border-left: 4px solid base.$pink-background;
 
-        &:last-child {
-            padding-bottom: 0;
+        // This add some space at the bottom of each element in a resume item 
+        &>* {
+            margin-bottom: 10px;
+        }
+
+        // This removes the space on the bottom of a resume item element because it's not needed for the last element
+        &>*:last-child {
+            margin-bottom: 0;
         }
     }
 
     // h3 is a header in the resume 
+    // @include base.resume-heading
+    // Here and below keeping BOTH SELECTORS temporarily while I'm trying to figure things out (not to break the code where it's still h3-h5)
+    &__heading,
     h3 {
-        font-weight: 700;
-        color: base.$pink-accent;
-        font-family: base.$subheader-font;
+        @include base.resume-heading;
         margin: 2% 0;
         padding: 1.5% 0;
     }
 
     // h4 is a subheader in the resume 
+    // @include resume-sub-heading
+    &__sub-heading,
     h4 {
-        color: base.$blue-green;
-        font-family: base.$merriweather-font;
-        margin: 0 0 1%;
+        @include base.resume-sub-heading;
+        // margin: 0 0 1%;
         position: relative;
 
         &::before {
@@ -61,12 +70,18 @@
     }
 
     // h5 is the years in the resume
+    // @include resume-year
+    &__year,
     h5 {
-        margin: 0 0 10px;
-        padding: 5px 15px;
+        @include base.resume-year;
+        // margin: 0 0 10px;
+        // padding: 5px 15px;
         display: inline-block;
-        color: base.$header-font;
-        background-color: base.$light-blue;
-        font-family: base.$merriweather-font;
     }
+
+    &__normal-text {
+        @include base.normal-text;
+    }
+
+
 }
