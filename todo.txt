@@ -5,7 +5,8 @@
 [] English and Russian versions, link rel canonical and alternate 
 [] add proper comments to everything 
 [] add media queries / make the website responsive 
-[?] started turning headings h1 h2 h3 etc into classes. do these mixins belong in typography or mixins partials? 
+[x] turned headings h1 h2 h3 etc into classes
+[] now I need to include these mixins and add classes in the rest of the code html
 [] create _responisve and move create media query sizes 
 
 
