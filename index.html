@@ -56,10 +56,10 @@
   <section id="greeting" class="greeting">
     <div class="greeting__grid">
       <div class="greeting__grid-text">
-        <div class="greeting__heading">Привет, меня зовут Мария 👋</div>
-        <div class="greeting__sub-heading"> ⸻ </div>
-        <div class="greeting__sub-heading"> Преподаватель <br> Наставник <br> Психотерапевт </div>
-        <div class="greeting__sub-heading"> ⸻ </div>
+        <h1 class="greeting__heading">Привет, меня зовут Мария 👋</h1>
+        <h2 class="greeting__sub-heading"> ⸻ </h2>
+        <h2 class="greeting__sub-heading"> Преподаватель <br> Наставник <br> Психотерапевт </h2>
+        <h2 class="greeting__sub-heading"> ⸻ </h2>
         <h3>Я преподаватель английского языка и гештальт-терапевт</h3>
         <h3 class="greeting__button"><a href="https://t.me/happysummerry" class="greeting__grid-text-button"
             role="button">
@@ -94,21 +94,26 @@
           </ul>
         </div> -->
 
-
+  <!-- About me resume section -->
   <section id="resume" class="resume">
-    <div class="resume__section-title">
-      <div class="resume__subheader">Обо мне</div>
-      <div class="resume__subsub">В этом разделе можно почитать о моём образовании и опыте работы</div>
+    <div class="resume__section section">
+      <h2 class="section__subheader">Обо мне</h2>
+      <h3 class="section__subsub">В этом разделе можно почитать о моём образовании и опыте работы</h3>
     </div>
+    <!-- 2 column grid container -->
     <div class="resume__container">
+      <!-- First column -->
       <div class="resume__column">
+
+        <!-- About me -->
         <h3 class="resume__heading">Общая информация</h3>
         <div class="resume__item">
-          <h4>Мария Александровна Аринцева</h4>
-          <p>Короткое Описание Марии Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde autem iure
+          <h4 class="resume__sub-heading">Мария Александровна Аринцева</h4>
+          <p class="resume__normal-text">Короткое Описание Марии Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Unde autem iure
             deserunt! Dolore veniam nesciunt dolorem veritatis nulla, inventore odio.</p>
-          <p>Мои хобби:</p>
-          <ul>
+          <p class="resume__normal-text">Мои хобби:</p>
+          <ul class="resume__normal-text">
             <li>Психология, гештальт-подход</li>
             <li>Рисование (акрил, маркеры) </li>
             <li>Создание рождественских композиций</li>
@@ -116,47 +121,88 @@
           </ul>
         </div>
 
-        <h3 class="resume__title">Образование</h3>
+        <!-- Education -->
+        <h3 class="resume__heading">Образование</h3>
         <div class="resume__item">
-          <h4>Лингвист. Преподаватель (английский, немецкий языки)<br>Теория и
+          <h4 class="resume__sub-heading"> Московский государственный лингвистический университет им. Мориса Тореза
+            (МГЛУ) <span class="resume--location">📍Москва, Россия</span></h4>
+          <h5 class="resume__year">2009-2014</h5>
+          <p class="resume__normal-text">Лингвист. Преподаватель (английский, немецкий языки)<br>Теория и
             методика преподавания иностранных
-            языков и культур</h4>
-          <h5>2009-2014</h5>
-          <p>МГЛУ им. Мориса Тореза 📍Москва, Россия</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non adipisci officiis minus alias suscipit
-            reprehenderit assumenda nihil recusandae expedita dicta?</p>
+            языков и культур</p>
         </div>
         <div class="resume__item">
-          <h4>Стажировка в Institute of Translation Studies</h4>
-          <h5>2013</h5>
-          <p>Карлов университет 📍Прага, Чехия</p>
-          <p></p>
+          <h4 class="resume__sub-heading">Карлов университет <span class="resume--location">📍Прага, Чехия</span></h4>
+          <h5 class="resume__year">2013</h5>
+          <p class="resume__normal-text">Стажировка в Institute of Translation Studies</p>
+
         </div>
         <div class="resume__item">
-          <h4></h4>
-          <h5></h5>
-          <p></p>
-          <p></p>
+          <h4 class="resume__sub-heading">Московский Институт Гештальта и Психодрамы (МИГИП) <span
+              class="resume--location">📍Москва, Россия</span></h4>
+          <h5 class="resume__year">2019-2020</h5>
+          <p class="resume__normal-text">Гештальт-терапия. Первая ступень.</p>
         </div>
         <div class="resume__item">
-          <h4></h4>
-          <h5></h5>
-          <p></p>
-          <p></p>
+          <h4 class="resume__sub-heading">Московский Институт Гештальта и Психодрамы (МИГИП) <span
+              class="resume--location">📍Москва, Россия</span></h4>
+          <h5 class="resume__year">2020-2024</h5>
+          <p class="resume__normal-text">Гештальт-терапия. Вторая ступень.</p>
+
         </div>
 
       </div>
-
+      <!-- Second column -->
       <div class="resume__column">
-        <h3 class="resume__title">Опыт работы</h3>
+        <!-- Work experience -->
+        <h3 class="resume__heading">Опыт работы</h3>
         <div class="resume__item">
-          <h4>Лингвист. Преподаватель (английский, немецкий языки)<br>Теория и
-            методика преподавания иностранных
-            языков и культур</h4>
-          <h5>2009-2014</h5>
-          <p>МГЛУ им. Мориса Тореза 📍Москва, Россия</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non adipisci officiis minus alias suscipit
-            reprehenderit assumenda nihil recusandae expedita dicta?</p>
+          <h4 class="resume__sub-heading">ОАНО Школа Летово <span class="resume--location">📍Москва, Россия</span></h4>
+          <h5 class="resume__year">2019 – настоящее время</h5>
+          <p class="resume__normal-text">
+            Учитель английского языка (7-9 классы, MYP Phases 3-5, Phase 3 leader)<br>
+            Спецкурсы: IELTS (Academic Module) Boost your speaking skills<br>
+            Наставник учеников 7-9 классов
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский государственный лингвистический университет им. Мориса Тореза
+            (МГЛУ) <span class="resume--location">📍Москва, Россия</span></h4>
+          <h5 class="resume__year">2014-2015 / 2016-2019</h5>
+          <p class="resume__normal-text">
+            Преподаватель английского языка на факультетах немецкого и французского языков (студенты 1-4 курсов
+            бакалавриата и студенты второго высшего образования).
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский государственный университет им. Ломоносова (МГУ) <span
+              class="resume--location">📍Москва, Россия</span>
+          </h4>
+          <h5 class="resume__year">2017-2018</h5>
+          <p class="resume__normal-text">Старший преподаватель английского языка на факультете журналистики (бакалавриат
+            и магистратура).</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Российская академия народного хозяйства
+            и государственной службы при Президенте Российской Федерации(РАНХиГС) <span
+              class="resume--location">📍Москва,
+              Россия</span></h4>
+          <h5 class="resume__year">2015-2017</h5>
+          <p class="resume__normal-text">Преподаватель немецкого языка (факультатив).</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading"> Высшая школа экономики(НИУ ВШЭ)<span class="resume--location">📍Москва,
+              Россия</span>
+          </h4>
+          <h5 class="resume__year">2016</h5>
+          <p class="resume__normal-text">Участие в создании и ведении языкового курса по книгами и фильмам "Гарри
+            Поттер"</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">ООО"Московский гид" <span class="resume--location">📍Москва, Россия</span>
+          </h4>
+          <h5 class="resume__year">2014</h5>
+          <p class="resume__normal-text">Переводчик</p>
         </div>
       </div>
     </div>
@@ -167,13 +213,13 @@
 
   <!-- English Teaching  -->
   <section id="english" class="english">
-    <div class="english__section-title">
-      <div class="english__subheader">Я преподаю английский язык</div>
-      <div class="english__subsub">"Мне важно создать атмосферу, где страхи и сомнения уступают место
+    <div class="section">
+      <div class="section__subheader">Я преподаю английский язык</div>
+      <div class="section__subsub">"Мне важно создать атмосферу, где страхи и сомнения уступают место
         вдохновению и
         интересу идти к себе и своей группе."</div>
     </div>
-    <div class="english__container">
+    <div class="container">
       <div class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores cumque debitis eaque
         fuga! Inventore voluptatum, nulla sint ducimus atque aliquam perferendis cupiditate esse voluptates qui
         voluptatibus doloribus ipsa consequatur dolores.
@@ -235,8 +281,8 @@
 
   <!-- Student Testimonials -->
   <section id="english-feedback" class="english-feedback">
-    <div class="english-feedback__section-title">
-      <div class="english-feedback__subheader">Что говорят мои студенты о наших занятиях?</div>
+    <div class="section">
+      <div class="section__subheader">Что говорят мои студенты о наших занятиях?</div>
     </div>
     <div class="english-feedback__container">
       <div class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores cumque debitis eaque
@@ -263,8 +309,8 @@
 
   <!-- Psychology  -->
   <section id="psychology" class="psychology">
-    <div class="psychology__section-title">
-      <div class="psychology__subheader">А еще я учусь на гештальт-терапевта</div>
+    <div class="section">
+      <div class="section__subheader">А еще я учусь на гештальт-терапевта</div>
     </div>
     <div class="psychology__container">
       <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, aspernatur corrupti
@@ -290,9 +336,9 @@
 
   <!-- Client Testimonials -->
   <section id="psychology-feedback" class="psychology-feedback">
-    <div class="psychology-feedback__section-title">
-      <div class="psychology-feedback__subheader">Что говорят мои клиенты о наших сессиях?</div>
-      <div class="psychology-feedback__subsub">Тестовая строчка</div>
+    <div class="section">
+      <div class="section__subheader">Что говорят мои клиенты о наших сессиях?</div>
+      <div class="section__subsub">Тестовая строчка</div>
     </div>
     <div class="psychology-feedback__container">
       <div class="lorem">

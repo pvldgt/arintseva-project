@@ -35,75 +35,27 @@
     padding: 0.5%;
 }
 
+// @mixin container {
+//     padding: 0 5rem;
+// font-family: typography.$merriweather-font;
+// }
+
 // Mixin that combines 3 previous mixins to make the code DRY and styles the section container 
-@mixin section ($class) {
-    .#{$class}__section-title {
-        @include section-title;
-    }
+// @mixin section ($class) {
+// .#{$class}__section-title {
+//     @include section-title;
+// }
 
-    .#{$class}__subheader {
-        @include subheader;
-    }
+// .#{$class}__subheader {
+//     @include subheader;
+// }
 
-    .#{$class}__subsub {
-        @include subsub;
-    }
+// .#{$class}__subsub {
+//     @include subsub;
+// }
 
-    .#{$class}__container {
-        padding: 0.5rem;
-        font-family: typography.$merriweather-font;
-    }
-}
-
-// Global text styles ============
-@mixin main-heading {
-    font-size: 5rem;
-    font-weight: typography.$bold-weight;
-    font-family: typography.$header-font;
-}
-
-@mixin sub-heading {
-    font-size: 2rem;
-    font-weight: typography.$semi-bold-weight;
-    font-family: typography.$subheader-font;
-}
-
-@mixin sub-text {
-    font-size: 1.4rem;
-    font-weight: typography.$normal-weight;
-    font-family: typography.$subheader-font;
-}
-
-@mixin normal-text {
-    font-size: 1rem;
-    font-weight: typography.$light-weight;
-    font-family: typography.$merriweather-font;
-}
-
-// ===================================
-
-// styles for the resume ==========
-@mixin resume-heading {
-    font-size: 1.3rem;
-    font-weight: typography.$bold-weight;
-    color: colors.$pink-accent;
-    font-family: typography.$subheader-font;
-}
-
-@mixin resume-sub-heading {
-    font-size: 1.2rem;
-    font-weight: typography.$bold-weight;
-    color: colors.$blue-green;
-    font-family: typography.$merriweather-font;
-}
-
-@mixin resume-year {
-    font-size: 1.1rem;
-    font-weight: typography.$bold-weight;
-    font-family: typography.$merriweather-font;
-    color: colors.$header;
-    background-color: colors.$light-blue;
-
-}
-
-// ==================================
+// .#{$class}__container {
+//     padding: 0.5rem;
+//     font-family: typography.$merriweather-font;
+// }
+// }

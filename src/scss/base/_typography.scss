@@ -1,3 +1,5 @@
+@use 'colors';
+
 // Fonts 
 $header-font: "Yanone Kaffeesatz", sans-serif;
 $subheader-font: "Montserrat Alternates", sans-serif;
@@ -9,3 +11,56 @@ $normal-weight: 400;
 $semi-bold-weight: 500;
 $bold-weight: 700;
 $black-weight: 900;
+
+// Global text styles ============
+@mixin main-heading {
+    font-size: 5rem;
+    font-weight: $bold-weight;
+    font-family: $header-font;
+}
+
+@mixin sub-heading {
+    font-size: 2rem;
+    font-weight: $semi-bold-weight;
+    font-family: $subheader-font;
+}
+
+@mixin sub-text {
+    font-size: 1.4rem;
+    font-weight: $normal-weight;
+    font-family: $subheader-font;
+}
+
+@mixin normal-text {
+    font-size: 1rem;
+    font-weight: $light-weight;
+    font-family: $merriweather-font;
+}
+
+// ===================================
+
+// styles for the resume ==========
+@mixin resume-heading {
+    font-size: 1.3rem;
+    font-weight: $bold-weight;
+    color: colors.$pink-accent;
+    font-family: $subheader-font;
+}
+
+@mixin resume-sub-heading {
+    font-size: 1.2rem;
+    font-weight: $bold-weight;
+    color: colors.$blue-green;
+    font-family: $merriweather-font;
+}
+
+@mixin resume-year {
+    font-size: 1.1rem;
+    font-weight: $bold-weight;
+    font-family: $merriweather-font;
+    color: colors.$header;
+    background-color: colors.$light-blue;
+
+}
+
+// ==================================

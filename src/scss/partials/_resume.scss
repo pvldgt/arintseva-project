@@ -3,7 +3,7 @@
 .resume {
     background-color: base.$blue;
     // This sets the styles of the whole section 
-    @include base.section(resume);
+    // @include base.section(resume);
 
     &__container {
         display: flex;
@@ -40,9 +40,7 @@
 
     // h3 is a header in the resume 
     // @include base.resume-heading
-    // Here and below keeping BOTH SELECTORS temporarily while I'm trying to figure things out (not to break the code where it's still h3-h5)
-    &__heading,
-    h3 {
+    &__heading {
         @include base.resume-heading;
         margin: 2% 0;
         padding: 1.5% 0;
@@ -50,8 +48,7 @@
 
     // h4 is a subheader in the resume 
     // @include resume-sub-heading
-    &__sub-heading,
-    h4 {
+    &__sub-heading {
         @include base.resume-sub-heading;
         // margin: 0 0 1%;
         position: relative;
@@ -69,13 +66,17 @@
         }
     }
 
+    &--location {
+        font-size: 1.1rem;
+        font-weight: base.$semi-bold-weight;
+        color: base.$location;
+    }
+
     // h5 is the years in the resume
     // @include resume-year
-    &__year,
-    h5 {
+    &__year {
         @include base.resume-year;
-        // margin: 0 0 10px;
-        // padding: 5px 15px;
+        padding: 3px 7px;
         display: inline-block;
     }
 

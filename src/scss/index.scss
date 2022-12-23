@@ -5,6 +5,8 @@ body {
   text-align: center;
   // This helped me prevent the sticky navbar from disappearing once I scrolled down more than the original 100vh. 
   height: auto;
+  // Set the default font
+  font-family: base.$merriweather-font;
 }
 
 body>* {
@@ -13,4 +15,21 @@ body>* {
 
 .lorem {
   @include base.normal-text;
+}
+
+.section {
+
+  @include base.section-title;
+
+  &__subheader {
+    @include base.subheader;
+  }
+
+  &__subsub {
+    @include base.subsub;
+  }
+}
+
+.container {
+  padding: 0 5rem;
 }

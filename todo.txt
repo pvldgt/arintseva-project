@@ -5,10 +5,13 @@
 [] English and Russian versions, link rel canonical and alternate 
 [] add proper comments to everything 
 [] add media queries / make the website responsive 
-[x] turned headings h1 h2 h3 etc into classes
-[] now I need to include these mixins and add classes in the rest of the code html
 [] create _responisve and move create media query sizes 
 
+[] make sure that all sections and containers are consistent 
+[] determine the breakpoints
+[] add media queries for the resume grid 
+
+[] take a look at how to do gh pages 
 
 [?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
 
@@ -33,7 +36,9 @@
 [x] remove header element as it was redundant
 [x] make the nav bar sticky without parent-for-sticky
 [x] decided to keep the original line-height set in the reset partial even in the resume section, as it looks the best 
-
+22.12
+[x] moved text styles from mixins back to typography 
+[x] added classes to h1-h6 and p
 
 
 
