@@ -2,17 +2,15 @@
 
 .resume {
     background-color: base.$blue;
-    // This sets the styles of the whole section 
-    // @include base.section(resume);
 
-    &__container {
+    &__grid-container {
         display: flex;
         flex-direction: row;
     }
 
     &__column {
-        padding: 0 3%;
         text-align: left;
+        padding: 0 3%;
         // border: solid 1px black;
         flex-grow: 0;
         flex-shrink: 0;
@@ -36,21 +34,22 @@
         &>*:last-child {
             margin-bottom: 0;
         }
+
+        &:hover {
+            transition: all 0.4s ease-out;
+            background-color: base.$dark-blue;
+            border-radius: 15px;
+        }
     }
 
-    // h3 is a header in the resume 
-    // @include base.resume-heading
     &__heading {
         @include base.resume-heading;
         margin: 2% 0;
         padding: 1.5% 0;
     }
 
-    // h4 is a subheader in the resume 
-    // @include resume-sub-heading
     &__sub-heading {
         @include base.resume-sub-heading;
-        // margin: 0 0 1%;
         position: relative;
 
         &::before {
@@ -66,14 +65,14 @@
         }
     }
 
-    &--location {
-        font-size: 1.1rem;
+    &__location {
+        font-size: 1rem;
         font-weight: base.$semi-bold-weight;
         color: base.$location;
+        // Prevent the location text from breaking apart onto different lines 
+        white-space: nowrap;
     }
 
-    // h5 is the years in the resume
-    // @include resume-year
     &__year {
         @include base.resume-year;
         padding: 3px 7px;
@@ -84,5 +83,8 @@
         @include base.normal-text;
     }
 
-
-}
+    &__organization {
+        @include base.resume-organization;
+        padding: 3px 7px;
+        display: inline-block;
+    }

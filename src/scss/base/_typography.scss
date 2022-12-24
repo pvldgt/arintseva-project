@@ -35,6 +35,7 @@ $black-weight: 900;
     font-size: 1rem;
     font-weight: $light-weight;
     font-family: $merriweather-font;
+    color: colors.$regular;
 }
 
 // ===================================
@@ -60,7 +61,15 @@ $black-weight: 900;
     font-family: $merriweather-font;
     color: colors.$header;
     background-color: colors.$light-blue;
-
 }
+
+@mixin resume-organization {
+    font-size: 1.1rem;
+    font-weight: $bold-weight;
+    font-family: $merriweather-font;
+    color: colors.$header;
+    background-color: colors.$light-yellow;
+}
+
 
 // ==================================
