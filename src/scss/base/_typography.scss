@@ -42,8 +42,8 @@ $black-weight: 900;
 
 // styles for the resume ==========
 @mixin resume-heading {
-    font-size: 1.3rem;
-    font-weight: $bold-weight;
+    font-size: 1.5rem;
+    font-weight: $semi-bold-weight;
     color: colors.$pink-accent;
     font-family: $subheader-font;
 }

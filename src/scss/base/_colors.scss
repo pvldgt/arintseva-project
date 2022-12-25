@@ -1,3 +1,4 @@
+// Base colors
 $white: rgb(255, 255, 255);
 $pink-accent: rgb(235, 89, 157);
 $pink-background: rgb(255, 212, 232);
@@ -12,3 +13,7 @@ $header: rgb(47, 44, 47);
 $regular: rgb(55, 55, 55);
 $light: rgb(105, 102, 102);
 $telegram: rgb(63, 141, 208);
+
+// Gradients
+$blue-pink-circle: linear-gradient(to left top, #ffd4e8, #efdffe, #dcebff, #d2f6ff, #d7fdfd);
+// $blue-pink-circle: radial-gradient(circle, #ffd4e8, #efdffe, #dcebff, #d2f6ff, #d7fdfd);
