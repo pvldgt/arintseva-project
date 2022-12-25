@@ -74,8 +74,7 @@
         font-size: 1rem;
         font-weight: base.$semi-bold-weight;
         color: base.$location;
-        // Prevent the location text from breaking apart onto different lines 
-        white-space: nowrap;
+
     }
 
     &__year {
