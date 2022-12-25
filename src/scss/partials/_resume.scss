@@ -93,4 +93,15 @@
         padding: 3px 7px;
         display: inline-block;
     }
+
+
+    @media only screen and (max-width: 900px) {
+        &__grid-container {
+            flex-direction: column;
+        }
+
+        &__column {
+            width: 100%;
+        }
+    }
 }
