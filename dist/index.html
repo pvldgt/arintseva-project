@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!--   Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:wght@400;700;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!--   Font Awesome-->
+  <script src="https://kit.fontawesome.com/6b0f9ce539.js" crossorigin="anonymous"></script>
+  <title>Мария Аринцева</title>
+  <!--   Favicon-->
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAB5BJREFUWEe1l2twVGcZx//PObvJbnY3t00CUUMIuyFcUsKdYLWVtk5G1LbTJmDJbgrIUMexncEyzlRqBxXrjA58ANSSTiWTXYQCCYNKawczGlEsNL0RCKFJJAELhOxustkku5s95zzOOdlrc4F+8P22533e5/0993cJ/+flfOeOCSP6SwBbAPqIQA3z2nOO7d5Nino1fZ77ubtuI4i/CsZrZHddnupszfEraQahYIkI9qfNze9VZcb6PKeIsYiJ5hJAzGgJK8LTJzbk+u8bgHuc68E4E710AKK4hEoa7nwWwtns2QXGHu07YxTAX1mRf+PeMOvss6f6bQqLe8F4goGz7qesVdMC8PXN2ZCkAwDZQLwz3De2I73YVB2/kPFnlLoeJ/WapOU4PVBGEr4HpjkQ6CEw52nbhGaRxO/O/Th7uKfccxpE32JWNk4LIF+r3S+IwvMxiwP/8vSbluWUCxli4jrGNip1vTFdGGuOc1q66KsjKL8ESAX5ICQLjxh1ulnM450MfmtKgJv71hrzymf7DPPMhpjyyEBYCfeOCuaVucmZMwxRrKCSBi3WyYu7nFUQ6AnIypm6zv3tiCh/AbCQgZPup/NqnE2eGwCEKQH40Aq9X8j71FJpzReMCYvHLvshmnVIn2tK9kIr7LZHiHZrWa2FvqduPsAdYKiHx6HICx3tvxoXYHgfQAErvI6IXgRhwSQA7nb+CAxn+OaoLnI3vMC8ImExSwoCF7wwVeRoIIl84Bep1L0vDtBVtxbE55M88hOyu/Y4mr1biPn3AJqMHuszt79wW58CwF21lSDh37GDY+1DLGbqKb04YbHkCyP4yQjMq3NBMQcSglCUlVR6pEPzQOdWC/SRwagH1JBdIpurYvsh1getnk8ZMGZ4+3Lrn1sZSQEYPrZ+r2WF9Yex7sCRqMXLciCaEhYHO4dBOoLBbkkOexuGjF+mlfURDaLLeVV1cbQCGJK0iMqOdjqavCcIXM2yUureUNCdAjD026+/aliY+VJ6UUZcccQTRqhnBJbVaigmxFlmjFzwwrg4C7osfQKC+Kdkc++eAHC4QVSbtPkK2Rt/7jjp3UfEO8C8ylWd35YCMHqoqjACvmxea80VMxIWj3X4IaSLMNjMcX2SP4KxK35Y1lhBYlxNBLLyIJUdeY+7nDtAiOcFGFeo1FWu9QmZqkNS/69PbFg8Hj/Jf/uaDsVffHLs8nCVPCJvs6yyxstNtTjwrhemB7IgZiYsDnUHwBLDuCAzuSo6YQgtR1C/CoLYmlKbMi+lMvfHyd8SAN3OYwA2qt4LdvhBRpEMJUkWD40j2DEMc6U1nnysMEYuejUAXXZaXK8i80FB4F0QBF88EbW4YC+VunZOB3ALQKEmJzECFzwwLcmGaElYHPwkoDVeY1ki+XhcAemFuLeUsIKxjwYVwzzzQV1+2vcBSsSSMQBkF1HpgXAMIuGBHuerYLwU25AGx6Fmu1mNcbTcNIvV5CvLhC43YXG8/tU+cdGHtFmGlHxJCQPxVrK5D08G6PpGOsj6HkAPxDY1iwEY5ycslgMRSL5xJPeGRN/wa57IKM9KufMzP67C5lpMNDHEUhvR9U1LIYsXAGjmxS1emBrjqbSrYCNtPmR+JX8iJDMtUh4j25GWSQDapd21uwBhYp4DkIcjGG33w6ImX6LcJqlXw6WOlmRvTc9AB8neqE3aybNALceiL50DqDKmIPSfEahDKa3QOK3OwHkPjIvu7amogvNkdz0YB9h8+LpBzrTsZFk5prZHbZoxfwhgoiVy9M0R7YRTUfhb+pH50H24f+JwL9ldJXEA5/GBhyHS30H4heupvJejoXgeEPbPHMzoLgNDLf3IWlcwY5iSdN0gu6s4DlB3cnAZk/wBMx91V+dvihpN6HGcBejR+4Hwt96FZbVVC9V9rDayu1bFAbaeHrBEJBoE4PMYB4veXl+qNQrucc4B8yWAZqwrVXb0w0HoZxtmzJMksAayu7ZoANv/xBm49X4kmF/SCua1ioIXjtTkHYgJc3fts4DQcC+rxm8FMX4nBPPynHuJqtd+h+yNb2oAzibPf5nxriDQW8z8BgjDkoI1R6vzOhMQzlMAnpxJs9ozAv/0wLQ0O2VgTXHmLkSxmEoaQjGAYYD6bubmLivyedoAqgDjhgRUxSC421kAoF19z80EobZveURC8ntisjy9QPbGuIfJ2ez9BxiVUlgqUgQhK01P56IXBRQou3KN+fUH1lOYexzfBNMf1Zfsffh4OpFW2EKPEp2QYwLkaPI9R1BeA/Prrur87XXNA/MVBW8S0dKo0ADALQBd/7HtoHmBufsH8afR5yO5Atato9LDA8nHSPsvJ85SH6LLAaqXwtIrtwsLvHO8vjom3gZgNaA9r9VR/HJjxY4bEPA7MJLe5vci4behV2qp+A9qpaUsrRVvPjMyWwoFzxBIhVAfldeY+VqGt/cZaXaxIRRmm0A6i9fkvaiWKPdtmoeIsAeMGlDSvJ/M0QPwz2Bzu2LTb0oA9aPqiXSxcAsR14JZdf+wMc06v/7bNDadfdzrKISEx0HCGjAXgTgNTD6wchUQ3oHddi75D8tUev4Hju0Z2MOXjD0AAAAASUVORK5CYII=">
+  <script type="module" crossorigin src="/arintseva-project/assets/index.1de03ae5.js"></script>
+  <link rel="stylesheet" href="/arintseva-project/assets/index.464dccb8.css">
+</head>
+
+<body>
+  <nav class="navbar navbar--margin" role="navigation">
+    <div class="navbar__logo">Мария Аринцева</div>
+    <div class="navbar__wrapper">
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a id="resume-link" class="navbar__link" aria-current="page" href="#resume">Обо мне</a>
+        </li>
+        <li class="navbar__item">
+          <a id="english-link" class="navbar__link" href="#english">Английский язык</a>
+        </li>
+        <li class="navbar__item">
+          <a id="psychology-link" class="navbar__link" href="#psychology">Гештальт-терапия</a>
+        </li>
+        <li class="navbar__item">
+          <a id="contacts-link" class="navbar__link" href="#contacts">Контакты</a>
+        </li>
+        <li class="navbar__item">
+          <a id="materials-link" class="navbar__link" href="#materials">Материалы</a>
+        </li>
+        <li class="navbar__item">
+          <a id="russian-language-link" class="navbar__link navbar--flag" href="index.html">🇷🇺</a>
+          <a id="english-language-link-link" class="navbar__link navbar--flag" href="en-version.html">🇬🇧</a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="navbar__hamburger">
+      <span class="navbar__hamburger-bar"></span>
+      <span class="navbar__hamburger-bar"></span>
+      <span class="navbar__hamburger-bar"></span>
+    </button>
+  </nav>
+
+  <!-- Main text and image -->
+  <section id="greeting" class="greeting">
+    <div class="greeting__grid">
+      <div class="greeting__grid-text">
+        <h1 class="greeting__heading">Привет, меня зовут Мария 👋</h1>
+        <h2 class="greeting__sub-heading"> ⸻ </h2>
+        <h2 class="greeting__sub-heading"> Преподаватель <br> Наставник <br> Психотерапевт </h2>
+        <h2 class="greeting__sub-heading"> ⸻ </h2>
+        <h3>Я преподаватель английского языка и гештальт-терапевт</h3>
+        <h3 class="greeting__button"><a href="https://t.me/happysummerberries" class="greeting__grid-text-button"
+            role="button">
+            Связаться со мной <i class="fa-brands fa-telegram greeting__telegram-logo"></i>
+          </a></h3>
+      </div>
+      <div class="greeting__grid-img">
+        <img src="/arintseva-project/assets/maria_main.3a0d07dc.PNG" alt="main-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- About me -->
+  <!-- <section id="resume" class="resume">
+    <div class="resume__section-title">
+      <div class="resume__subheader">Обо мне</div>
+      <div class="resume__subsub">В этом разделе можно почитать о моём образовании и опыте работы</div>
+    </div>
+    <div class="resume__container">
+      <div class="resume__column">
+        <h3 class="resume__title resume--resume-heading">Общая информация</h3>
+        <div class="resume__item">
+          <h4>Мария Александровна Аринцева</h4>
+          <p>Короткое Описание Марии Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde autem iure
+            deserunt! Dolore veniam nesciunt dolorem veritatis nulla, inventore odio.</p>
+          <p>Мои хобби:</p>
+          <ul>
+            <li>Психология, гештальт-подход</li>
+            <li>Рисование (акрил, маркеры) </li>
+            <li>Создание рождественских композиций</li>
+            <li>Танцы</li>
+          </ul>
+        </div> -->
+
+  <!-- About me resume section -->
+  <section id="resume" class="resume">
+    <div class="resume__section section">
+      <h2 class="section__subheader">Обо мне</h2>
+      <h3 class="section__subsub">В этом разделе можно почитать о моём образовании и опыте работы</h3>
+    </div>
+    <!-- 2 column grid container -->
+    <div class="resume__grid-container">
+      <!-- First column -->
+      <div class="resume__column">
+
+        <!-- About me -->
+        <h3 class="resume__heading">Общая информация</h3>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Мария Александровна Аринцева</h4>
+          <p class="resume__normal-text">Короткое Описание Марии Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Unde autem iure
+            deserunt! Dolore veniam nesciunt dolorem veritatis nulla, inventore odio.</p>
+          <p class="resume__normal-text">Мои хобби:</p>
+          <ul class="resume__normal-text">
+            <li>Психология, гештальт-подход</li>
+            <li>Рисование (акрил, маркеры) </li>
+            <li>Создание рождественских композиций</li>
+            <li>Танцы</li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <h3 class="resume__heading">Образование</h3>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading"> Московский государственный лингвистический университет им. Мориса Тореза
+            (МГЛУ)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2009-2014</h5>
+          <p class="resume__normal-text">Лингвист. Преподаватель (английский, немецкий языки)<br>Теория и
+            методика преподавания иностранных
+            языков и культур</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Карлов университет</h4>
+          <h4 class="resume__location">📍Прага, Чехия</h4>
+          <h5 class="resume__year">2013</h5>
+          <p class="resume__normal-text">Стажировка в Institute of Translation Studies</p>
+
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский Институт Гештальта и Психодрамы (МИГИП)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2019-2020</h5>
+          <p class="resume__normal-text">Гештальт-терапия. Первая ступень.</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский Институт Гештальта и Психодрамы (МИГИП)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2020-2024</h5>
+          <p class="resume__normal-text">Гештальт-терапия. Вторая ступень</p>
+
+        </div>
+
+      </div>
+      <!-- Second column -->
+      <div class="resume__column">
+        <!-- Work experience -->
+        <h3 class="resume__heading">Опыт работы</h3>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">ОАНО Школа Летово</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2019 – настоящее время</h5>
+          <p class="resume__normal-text">
+            Учитель английского языка (7-9 классы, MYP Phases 3-5, Phase 3 leader)<br>
+            Спецкурсы: IELTS (Academic Module), Boost your speaking skills<br>
+            Наставник учеников 7-9 классов
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский государственный лингвистический университет им. Мориса Тореза
+            (МГЛУ)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2014-2015 и 2016-2019</h5>
+          <p class="resume__normal-text">
+            Преподаватель английского языка на факультетах немецкого и французского языков (студенты 1-4 курсов
+            бакалавриата и студенты второго высшего образования)
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Московский государственный университет им. Ломоносова (МГУ)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2017-2018</h5>
+          <p class="resume__normal-text">Старший преподаватель английского языка на факультете журналистики (бакалавриат
+            и магистратура)</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">Российская академия народного хозяйства
+            и государственной службы при Президенте Российской Федерации(РАНХиГС)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2015-2017</h5>
+          <p class="resume__normal-text">Преподаватель немецкого языка (факультатив).</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading"> Высшая школа экономики(НИУ ВШЭ)</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2016</h5>
+          <p class="resume__normal-text">Участие в создании и ведении языкового курса по книгами и фильмам "Гарри
+            Поттер"</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__sub-heading">ООО"Московский гид"</h4>
+          <h4 class="resume__location">📍Москва, Россия</h4>
+          <h5 class="resume__year">2014</h5>
+          <p class="resume__normal-text">Переводчик</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates -->
+    <div class="resume__certificate-container">
+      <h3 class="resume__heading">Сертификаты</h3>
+      <!-- <div class="resume__container-flex"> -->
+      <div class="resume__grid-container">
+
+        <div class="resume__column">
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Волонтерство в летней языковой школе</h4>
+            <h4 class="resume__organization">English Language School</h4>
+            <h5 class="resume__year">2013</h5>
+            <h4 class="resume__location">📍Nab Cottage, Амблсайд, Великобритания</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Certificate of Proficiency in English (CPE)</h4>
+            <h4 class="resume__organization">Cambridge English</h4>
+            <h5 class="resume__year">2014</h5>
+            <h4 class="resume__location">📍Москва, Россия</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">CELTA</h4>
+            <h4 class="resume__organization">Cambridge School</h4>
+            <h5 class="resume__year">2016</h5>
+            <h4 class="resume__location">📍Гранольерс, Испания</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Тренинг From Words to Grammar</h4>
+            <h4 class="resume__organization">Leo Selivan</h4>
+            <h5 class="resume__year">2019</h5>
+            <h4 class="resume__location">📍 Минск, Беларусь</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">IB Professional Development: Language Acquisition MYP (Category
+              1)</h4>
+            <h4 class="resume__organization">International Baccalaureate® (IB)</h4>
+            <h5 class="resume__year">2020</h5>
+            <h4 class="resume__location">📍 Онлайн</h4>
+          </div>
+        </div>
+
+        <div class="resume__column">
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Differentiated Instruction Made Practical</h4>
+            <h4 class="resume__organization">Harvard Graduate School of Education</h4>
+            <h5 class="resume__year">2021</h5>
+            <h4 class="resume__location">📍Онлайн</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Нейробиология психотерапии</h4>
+            <h4 class="resume__organization">МИГИП</h4>
+            <h5 class="resume__year">2021</h5>
+            <h4 class="resume__location">📍 Москва, Россия </h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Как решать проблемы детства при работе со взрослыми</h4>
+            <h4 class="resume__organization">Lynn Stadler в МИГИП</h4>
+            <h5 class="resume__year">2022</h5>
+            <h4 class="resume__location">📍 Москва, Россия</h4>
+          </div>
+
+          <div class="resume__item">
+            <h4 class="resume__sub-heading">Эксперт ЕГЭ</h4>
+            <h4 class="resume__organization">Московский центр качества образования (МЦКО)</h4>
+            <h5 class="resume__year">2022</h5>
+            <h4 class="resume__location">📍 Москва, Россия</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- English Teaching  -->
+  <section id="english" class="english">
+    <div class="section">
+      <div class="section__subheader">Я преподаю английский язык</div>
+      <div class="section__subsub">"Мне важно создать атмосферу, где страхи и сомнения уступают место
+        вдохновению и
+        интересу идти к себе и своей группе."</div>
+    </div>
+    <div class="container">
+      <div class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores cumque debitis eaque
+        fuga! Inventore voluptatum, nulla sint ducimus atque aliquam perferendis cupiditate esse voluptates qui
+        voluptatibus doloribus ipsa consequatur dolores.
+        Eligendi, perspiciatis illo. Voluptatem eum fuga tenetur ipsa quos, at minus fugit ipsum eaque illo accusamus
+        blanditiis est iste ipsam sunt hic. Atque quae architecto molestias cupiditate facilis dignissimos. Nam?
+        Ab, molestiae consequuntur fuga animi error laborum atque iure, blanditiis explicabo eum debitis, accusamus
+        maxime cum. Rem earum ex beatae, velit pariatur error cumque ipsa, deleniti cum, voluptatem unde laboriosam.
+        Blanditiis eaque enim iure excepturi harum voluptas itaque eius praesentium, quam repudiandae saepe minima
+        quasi corporis quidem aspernatur architecto! Ea vitae iste aut dicta laboriosam repellat ex facilis porro ad?
+        Nihil, fugiat nisi! Eius praesentium asperiores minus ducimus cum modi, aut quaerat accusamus, dolore aliquid
+        numquam? Tempore fugiat esse adipisci consequatur, error omnis impedit laudantium amet recusandae et, cumque
+        ab.
+        Veritatis reprehenderit nihil itaque laborum corrupti, nesciunt ad sed vel saepe blanditiis ipsa pariatur
+        quibusdam, excepturi aliquam voluptatum ut iusto error maiores vero debitis dignissimos facere aperiam
+        voluptate? At, atque.
+        Sed consequatur consectetur numquam quos impedit magnam ipsum dicta, voluptate repudiandae, officia vel. Qui
+        quasi laboriosam impedit earum esse? Ipsum delectus, reprehenderit eligendi alias facere nemo nulla quisquam
+        fugiat veniam.
+        Veniam perspiciatis corrupti, nemo amet itaque qui ducimus ea rem optio, nihil accusamus nam doloribus
+        facilis, laudantium quidem! Temporibus quam reiciendis repellendus incidunt mollitia nisi rerum culpa ipsum
+        praesentium dicta?
+        Aliquid ex rem magnam vero amet consequuntur velit non enim eveniet accusamus pariatur culpa ut alias minima
+        eos sit commodi sequi sint, officiis, labore nihil nobis obcaecati. Ullam, totam et.
+        Aspernatur tempora officia delectus at necessitatibus illo atque officiis autem iste beatae in non, esse
+        facere velit. Vel dolorem quaerat unde eum. Dolores tempora autem, laboriosam voluptatem sit exercitationem
+        libero.
+        Voluptatem tenetur repellendus deleniti animi ducimus cupiditate suscipit omnis modi dolore vero sequi,
+        consectetur officia minima impedit incidunt in. Nostrum quo porro eius inventore laboriosam ut in quasi odio
+        tempora.
+        Sint, fugit nam. Mollitia officia similique dolores vel reprehenderit voluptatem error voluptatibus modi odio
+        dolore! Et soluta repellendus est, recusandae magni maxime commodi sint deleniti accusantium eveniet! Aut,
+        quos esse.
+        Expedita distinctio fuga ex maiores labore nesciunt nostrum dolorem doloremque officiis enim unde sequi
+        voluptas itaque corporis hic quidem debitis dolorum earum corrupti recusandae, molestias repellendus mollitia
+        reprehenderit. Magnam, perferendis?
+        Aliquam modi, hic asperiores nemo, dignissimos repellendus recusandae assumenda molestiae unde officiis sequi
+        deleniti sit, nam quod? Recusandae explicabo in inventore dicta adipisci reiciendis repellat! Quaerat
+        voluptatem autem voluptate quas.
+        Quibusdam at dolore neque magni, ut impedit inventore, ipsam ipsum accusamus vel adipisci labore harum tenetur
+        provident ea quis eius quaerat assumenda molestias quae, sunt sequi architecto. Voluptatibus, quas eaque?
+        Itaque, deserunt. Officiis exercitationem ratione odit unde deserunt magnam, suscipit facere dolorum
+        cupiditate aut iure ea fugiat at excepturi, vitae, delectus porro sunt qui sapiente voluptate veniam similique
+        alias. Tempore.
+        Mollitia quisquam sapiente vel quia facere natus, aliquam illum, sit animi provident veritatis facilis
+        repellendus cum optio nostrum tenetur illo nesciunt, porro ipsam voluptatem dolores delectus officia.
+        Expedita, quasi ea!
+        Rem placeat alias nobis ducimus, doloremque ullam non error maiores explicabo. Molestiae sequi quas aliquid
+        numquam sit ducimus reiciendis nihil deleniti perferendis repellendus? Natus ducimus sapiente sequi dolorum
+        maxime possimus.
+        Voluptatem, illum consequuntur ducimus enim dicta aliquid quaerat dolores necessitatibus, nobis veritatis
+        dolore, molestiae ratione laborum? Eligendi dolorum cupiditate quaerat debitis saepe, accusantium sint et qui
+        asperiores libero voluptatum quas.
+        Iure molestias fugiat neque quia modi dolores aperiam illum odio quisquam eos, reiciendis libero natus ad
+        porro odit veritatis ducimus voluptates obcaecati impedit, nihil minima ipsum dignissimos. Temporibus, vel
+        assumenda!
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Testimonials -->
+  <section id="english-feedback" class="english-feedback">
+    <div class="section">
+      <div class="section__subheader">Что говорят мои студенты о наших занятиях?</div>
+    </div>
+    <div class="english-feedback__container">
+      <div class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores cumque debitis eaque
+        fuga! Inventore voluptatum, nulla sint ducimus atque aliquam perferendis cupiditate esse voluptates qui
+        voluptatibus doloribus ipsa consequatur dolores.
+        Eligendi, perspiciatis illo. Voluptatem eum fuga tenetur ipsa quos, at minus fugit ipsum eaque illo accusamus
+        blanditiis est iste ipsam sunt hic. Atque quae architecto molestias cupiditate facilis dignissimos. Nam?
+        Ab, molestiae consequuntur fuga animi error laborum atque iure, blanditiis explicabo eum debitis, accusamus
+        maxime cum. Rem earum ex beatae, velit pariatur error cumque ipsa, deleniti cum, voluptatem unde laboriosam.
+        Blanditiis eaque enim iure excepturi harum voluptas itaque eius praesentium, quam repudiandae saepe minima
+        quasi corporis quidem aspernatur architecto! Ea vitae iste aut dicta laboriosam repellat ex facilis porro ad?
+        Nihil, fugiat nisi! Eius praesentium asperiores minus ducimus cum modi, aut quaerat accusamus, dolore aliquid
+        numquam? Tempore fugiat esse adipisci consequatur, error omnis impedit laudantium amet recusandae et, cumque
+        ab.
+        Voluptatem, illum consequuntur ducimus enim dicta aliquid quaerat dolores necessitatibus, nobis veritatis
+        dolore, molestiae ratione laborum? Eligendi dolorum cupiditate quaerat debitis saepe, accusantium sint et qui
+        asperiores libero voluptatum quas.
+        Iure molestias fugiat neque quia modi dolores aperiam illum odio quisquam eos, reiciendis libero natus ad
+        porro odit veritatis ducimus voluptates obcaecati impedit, nihil minima ipsum dignissimos. Temporibus, vel
+        assumenda!
+      </div>
+    </div>
+  </section>
+
+  <!-- Psychology  -->
+  <section id="psychology" class="psychology">
+    <div class="section">
+      <div class="section__subheader">А еще я учусь на гештальт-терапевта</div>
+    </div>
+    <div class="psychology__container">
+      <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, aspernatur corrupti
+        repudiandae blanditiis architecto et. Asperiores cupiditate necessitatibus sit repellat corrupti ipsam natus
+        voluptatum unde ratione! Ullam nisi sed nostrum.
+        Laborum vel vitae ducimus excepturi nihil sint dolore dicta porro dolor ad veniam repellat laboriosam esse
+        iste sed obcaecati quas similique labore suscipit, et earum nobis. Minima quod eligendi qui?
+        At optio dolores, adipisci porro omnis blanditiis facilis atque inventore cupiditate, enim nulla eligendi
+        tempore illum nesciunt, vel hic non maiores quis harum sit veritatis. Adipisci beatae eos molestiae incidunt?
+        Illum quo voluptates sequi id quaerat quasi totam non ex. Quas quia debitis nisi, amet voluptate eveniet ut
+        totam suscipit natus ea quisquam soluta sint ab, quam necessitatibus dolorum eius?
+        Velit, ut quidem omnis debitis esse neque laborum quaerat id, accusantium enim possimus at molestiae eos
+        mollitia officia. Voluptatibus animi saepe facere rerum tenetur unde quasi dicta reiciendis mollitia quaerat.
+        Molestias inventore culpa rem consequatur illum eaque totam accusamus quibusdam fuga deserunt, nihil unde nisi
+        recusandae. Nobis aut quo beatae, iure quidem sint! Porro, animi voluptate at quia aspernatur minus!
+        Nisi nobis cupiditate veritatis vero dignissimos sequi impedit corporis quisquam ex. Harum quos et expedita
+        perferendis sed, est sequi sunt ut magni dolore cum sapiente dolor numquam officia dicta deleniti!
+        Eligendi deserunt doloremque ipsum est dolor totam magni natus! Id fuga odio, quasi asperiores debitis itaque
+        tenetur nesciunt explicabo magnam suscipit deserunt minus corporis. Laudantium ea facilis nam porro suscipit.
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section id="psychology-feedback" class="psychology-feedback">
+    <div class="section">
+      <div class="section__subheader">Что говорят мои клиенты о наших сессиях?</div>
+      <div class="section__subsub">Тестовая строчка</div>
+    </div>
+    <div class="psychology-feedback__container">
+      <div class="lorem">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aspernatur accusantium nihil eius,
+        distinctio assumenda fugiat fugit ducimus officiis libero commodi voluptatum unde ipsum porro accusamus
+        dolores! Ipsa, amet cumque.
+        Architecto sint dolorum nobis! Expedita, accusamus obcaecati maxime nihil facere mollitia eligendi dignissimos
+        iusto, sed ullam ratione rerum similique reprehenderit ipsum at perspiciatis, aut a? Provident sapiente itaque
+        neque possimus?
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      Designed and developed by <a href="https://t.me/krosengover">Pavel Degtyarev</a>
+    </div>
+  </footer>
+
+  <script src="navbar.js"></script>
+
+</body>
+
+</html>
