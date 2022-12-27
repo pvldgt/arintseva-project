@@ -9,8 +9,16 @@ body {
   font-family: base.$merriweather-font;
 }
 
+
+
 body>* {
   padding: 2% 3%;
+}
+
+@media (min-width: 1080px) {
+  body>* {
+    padding: 5px 3%;
+  }
 }
 
 .lorem {

@@ -13,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  // Add this to have padding on both sides of inline elements when there is a line break 
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
