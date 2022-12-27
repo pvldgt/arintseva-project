@@ -1,6 +1,6 @@
 @use 'src/scss/base';
 
 footer {
-    background-color: base.$light-blue;
+    background: base.$footer-gradient;
     @include base.normal-text;
 }

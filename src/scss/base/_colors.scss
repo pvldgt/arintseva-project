@@ -15,5 +15,7 @@ $light: rgb(105, 102, 102);
 $telegram: rgb(63, 141, 208);
 
 // Gradients
+$navbar-gradient: radial-gradient(circle, rgb(253, 153, 223) 0%, rgb(184, 162, 250) 47%, rgb(167, 180, 249) 79%, rgb(178, 237, 249) 100%);
+$footer-gradient: radial-gradient(circle, rgb(198, 241, 250) 0%, rgb(210, 217, 250) 47%, rgb(224, 213, 255) 79%, rgb(251, 218, 241)100%);
 $blue-pink-circle: linear-gradient(to left top, #ffd4e8, #efdffe, #dcebff, #d2f6ff, #d7fdfd);
 // $blue-pink-circle: radial-gradient(circle, #ffd4e8, #efdffe, #dcebff, #d2f6ff, #d7fdfd);

@@ -2,6 +2,7 @@
 @use 'partials';
 
 body {
+
   text-align: center;
   // This helped me prevent the sticky navbar from disappearing once I scrolled down more than the original 100vh. 
   height: auto;
@@ -10,16 +11,15 @@ body {
 }
 
 
-
 body>* {
   padding: 2% 3%;
 }
 
-@media (min-width: 1080px) {
-  body>* {
-    padding: 5px 3%;
-  }
-}
+// @media (min-width: 1080px) {
+//   body>* {
+//     padding: 5px 3%;
+//   }
+// }
 
 .lorem {
   @include base.normal-text;
@@ -36,7 +36,56 @@ body>* {
   &__subsub {
     @include base.subsub;
   }
+
+  // Make the section a flex box 
+  &--flex {
+    display: flex;
+    gap: 2%;
+  }
+
+  // Setting of each flex item 
+  &__flex-item {
+    align-self: center;
+  }
+
+  &__picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+  }
+
+  // Modifiers for right and left text alignment
+  &--right-align {
+    text-align: right;
+  }
+
+  &--left-align {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 900px) {
+    &--flex {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    // On small screens make the text center aligned again
+    &--right-align,
+    &--left-align {
+      text-align: center;
+    }
+
+  }
+
+  &--no-separator {
+
+    &::before,
+    &::after {
+      content: " ";
+    }
+  }
 }
+
 
 .container {
   padding: 0 5rem;
