@@ -3,7 +3,6 @@
 
 // Create 3 mixins that will be used to style the heading and subheading of sections
 @mixin section-title {
-    padding: 1.5% 2.5%;
 
     &::before,
     &::after {

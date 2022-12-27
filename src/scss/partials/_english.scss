@@ -3,4 +3,7 @@
 .english {
     background: base.$light-yellow;
 
+    &__normal-text {
+        @include base.normal-text;
+    }
 }

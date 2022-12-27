@@ -1,0 +1,70 @@
+@use 'mixins';
+
+// Section styling 
+.section {
+
+    padding: 1.5% 3.5%;
+
+    @include mixins.section-title;
+
+    &__subheader {
+        @include mixins.subheader;
+    }
+
+    &__subsub {
+        @include mixins.subsub;
+    }
+
+    // Make the section a flex box 
+    &--flex {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    // Setting of each flex item 
+    &__flex-item {
+        align-self: center;
+    }
+
+    &__text {
+        // flex-shrink: ;
+    }
+
+    &__picture {
+        width: 250px;
+        height: 250px;
+        border-radius: 200px;
+    }
+
+    // Modifiers for right and left text alignment
+    &--right-align {
+        text-align: right;
+    }
+
+    &--left-align {
+        text-align: left;
+    }
+
+    @media only screen and (max-width: 900px) {
+        &--flex {
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+
+        // On small screens make the text center aligned again
+        &--right-align,
+        &--left-align {
+            text-align: center;
+        }
+
+    }
+
+    &--no-separator {
+
+        &::before,
+        &::after {
+            content: " ";
+        }
+    }
+}

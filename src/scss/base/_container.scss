@@ -1,0 +1,15 @@
+@use 'typography';
+
+.container {
+    padding: 0 5rem;
+
+    &__element {}
+
+    &--normal-text {
+        @include typography.normal-text;
+    }
+
+    &--left-align {
+        text-align: left;
+    }
+}
