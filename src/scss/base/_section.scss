@@ -19,7 +19,7 @@
     &--flex {
         display: flex;
         justify-content: center;
-        gap: 2%;
+        gap: 1.5rem;
     }
 
     // Setting of each flex item 
@@ -29,11 +29,12 @@
 
     &__text {
         // flex-shrink: ;
+
     }
 
     &__picture {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         border-radius: 200px;
     }
 
@@ -46,10 +47,20 @@
         text-align: left;
     }
 
+    &--no-separator {
+        padding: 1.5% 15.5%;
+
+        &::before,
+        &::after {
+            content: " ";
+        }
+    }
+
+    // Media queries 
     @media only screen and (max-width: 900px) {
         &--flex {
             flex-direction: column;
-            row-gap: 1rem;
+            row-gap: 2rem;
         }
 
         // On small screens make the text center aligned again
@@ -60,11 +71,4 @@
 
     }
 
-    &--no-separator {
-
-        &::before,
-        &::after {
-            content: " ";
-        }
-    }
 }
