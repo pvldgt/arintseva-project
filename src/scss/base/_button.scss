@@ -1,0 +1,30 @@
+@use 'colors';
+@use 'typography';
+
+.button {
+
+    margin: 2em;
+
+    &__text {
+        @include typography.sub-text;
+        color: colors.$regular;
+        padding: 0.7rem;
+        text-decoration: none;
+        border: solid 1px colors.$regular;
+        border-radius: 20px;
+    }
+
+    &__text:hover {
+        color: colors.$white;
+        background-color: colors.$pink-accent;
+        border: none;
+
+        .button__logo {
+            color: colors.$white;
+        }
+    }
+
+    &__logo {
+        color: colors.$telegram;
+    }
+}

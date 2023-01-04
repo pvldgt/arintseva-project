@@ -1,32 +1,32 @@
 @use 'typography';
 
 .container {
-    padding: 1.5rem 10rem;
-    text-align: center;
+    padding: 2% 10%;
+    list-style: inside;
     // display: grid;
     // gap: 15px 10px;
 
-    &--grid-2-1 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    // &--grid-2-1 {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
 
-    &--takes-2 {
-        grid-column-start: span 2;
-        justify-self: center;
-        list-style: inside;
-    }
+    // &--takes-2 {
+    //     grid-column-start: span 2;
+    //     justify-self: center;
+    // list-style: inside;
+    // }
 
     // &__container__list {
     //     list-style: inside;
     // }
 
-    &__element {}
+    // &__element {}
 
     &--normal-text {
         @include typography.normal-text;
     }
 
-    // &--left-align {
-    //     text-align: left;
-    // }
+    &--left-align {
+        text-align: left;
+    }
 }
