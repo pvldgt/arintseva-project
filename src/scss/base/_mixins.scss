@@ -33,28 +33,3 @@
     color: colors.$light;
     padding: 0.5%;
 }
-
-// @mixin container {
-//     padding: 0 5rem;
-// font-family: typography.$merriweather-font;
-// }
-
-// Mixin that combines 3 previous mixins to make the code DRY and styles the section container 
-// @mixin section ($class) {
-// .#{$class}__section-title {
-//     @include section-title;
-// }
-
-// .#{$class}__subheader {
-//     @include subheader;
-// }
-
-// .#{$class}__subsub {
-//     @include subsub;
-// }
-
-// .#{$class}__container {
-//     padding: 0.5rem;
-//     font-family: typography.$merriweather-font;
-// }
-// }

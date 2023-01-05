@@ -1,0 +1,43 @@
+// Media queries are used in container, section, greetings, nav, resume 
+
+// Huge screens 
+@mixin large-screens {
+    @media only screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+// Above 1080 
+@mixin above-1080 {
+    @media only screen and (min-width: 1080px) {
+        @content;
+    }
+}
+
+// Below 1080 
+@mixin below-1080 {
+    @media only screen and (max-width: 1080px) {
+        @content;
+    }
+}
+
+// Average size 
+@mixin average-screens {
+    @media only screen and (min-width: 951px) and (max-width: 1290px) {
+        @content;
+    }
+}
+
+// Medium screens
+@mixin medium-screens {
+    @media only screen and (max-width: 950px) {
+        @content;
+    }
+}
+
+// Small screens
+@mixin small-screens {
+    @media only screen and (max-width: 500px) {
+        @content;
+    }
+}

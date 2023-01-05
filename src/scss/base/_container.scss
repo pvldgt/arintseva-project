@@ -1,28 +1,11 @@
 @use 'typography';
+@use 'responsive';
 
 .container {
     padding: 2% 10%;
     list-style: inside;
-    // display: grid;
-    // gap: 15px 10px;
 
-    // &--grid-2-1 {
-    //     grid-template-columns: repeat(2, 1fr);
-    // }
-
-    // &--takes-2 {
-    //     grid-column-start: span 2;
-    //     justify-self: center;
-    // list-style: inside;
-    // }
-
-    // &__container__list {
-    //     list-style: inside;
-    // }
-
-    // &__element {}
-
-    &--normal-text {
+    &__normal-text {
         @include typography.normal-text;
     }
 
@@ -30,8 +13,7 @@
         text-align: left;
     }
 
-
-    @media (min-width: 1080px) {
+    @include responsive.above-1080 {
         max-width: 1380px;
         margin: auto;
     }
