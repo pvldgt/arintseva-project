@@ -11,7 +11,11 @@
 [] determine the breakpoints
 [] add media queries for the resume grid 
 
-[] take a look at how to do gh pages 
+[] JS doesn’t work in build 
+[] Should I somehow hide the resume a little so that it doesn't take up so much space? 
+[] Try to make the footer same color as navbar 
+[] Rename grid container to flex container? 
+[] media queries: for a query > 1380? make padding on body not % based but pixel based 
 
 [?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
 
@@ -39,7 +43,8 @@
 22.12
 [x] moved text styles from mixins back to typography 
 [x] added classes to h1-h6 and p
-
-
-
+25.12
+[x] take a look at how to do gh pages 
+[x] managed to build the EN version into build and upload to github pages
+[x] fix typos, on mobile the word 'certificates' has to be left aligned 
 

@@ -1,4 +1,5 @@
 @use 'mixins';
+@use 'colors';
 
 // Section styling 
 .section {
@@ -15,11 +16,26 @@
         @include mixins.subsub;
     }
 
+    // Clearly specified the background colors for the filter brightness below in --flex
+    &--english-background {
+        background-color: colors.$light-yellow;
+    }
+
+    &--psychology-background {
+        background-color: colors.$pink-background;
+    }
+
     // Make the section a flex box 
-    &--flex {
+    &__flex-container {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
+        // setting the 'card' style
+        filter: brightness(102%);
+        border-radius: 30px;
+        padding: 7%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     // Setting of each flex item 
@@ -27,15 +43,16 @@
         align-self: center;
     }
 
-    &__text {
-        // flex-shrink: ;
-
-    }
-
     &__picture {
         width: 300px;
         height: 300px;
         border-radius: 200px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media only screen and (max-width: 500px) {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     // Modifiers for right and left text alignment
@@ -48,7 +65,7 @@
     }
 
     &--no-separator {
-        padding: 1.5% 15.5%;
+        padding: 1.5% 12.5%;
 
         &::before,
         &::after {
@@ -57,10 +74,10 @@
     }
 
     // Media queries 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1000px) {
         &--flex {
             flex-direction: column;
-            row-gap: 2rem;
+            row-gap: 1.2rem;
         }
 
         // On small screens make the text center aligned again
@@ -69,6 +86,11 @@
             text-align: center;
         }
 
+    }
+
+    @media (min-width: 1080px) {
+        max-width: 1380px;
+        margin: auto;
     }
 
 }

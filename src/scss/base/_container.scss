@@ -29,4 +29,11 @@
     &--left-align {
         text-align: left;
     }
+
+
+    @media (min-width: 1080px) {
+        max-width: 1380px;
+        margin: auto;
+    }
+
 }
