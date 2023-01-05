@@ -3,7 +3,7 @@
 
 .button {
 
-    margin: 2em;
+    margin: 2em auto;
 
     &__text {
         @include typography.sub-text;
