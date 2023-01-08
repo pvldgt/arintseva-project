@@ -33,18 +33,17 @@
 
     &__heading {
         @include base.main-heading;
-        color: base.$header;
+        // color: base.$header;
     }
 
     &__sub-heading {
         @include base.sub-heading;
-        color: base.$regular;
+        // color: base.$regular;
         padding: 1% 5%;
     }
 
     &__sub-text {
         @include base.sub-text;
-        color: base.$light;
 
     }
 

@@ -2,7 +2,7 @@
 @use 'typography';
 
 .button {
-
+    background: transparent;
     margin: 2em auto;
 
     &__text {
@@ -26,5 +26,13 @@
 
     &__logo {
         color: colors.$telegram;
+    }
+
+    &--medium-margin {
+        margin: 20px auto 0px;
+    }
+
+    &--smaller-margin {
+        margin: 5px auto;
     }
 }

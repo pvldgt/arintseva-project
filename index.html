@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./src/main.js"></script>
+  <!-- English version available, MUST BE A FULL LINK  -->
+  <!-- <link rel=”alternate” href=”en-version.html” hreflang=”en” /> -->
+  <!-- <link rel=”alternate” href=”index.html” hreflang=”ru” /> -->
+
   <!--   Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +20,9 @@
   <title>Мария Аринцева</title>
   <!--   Favicon-->
   <link rel="icon" type="image/x-icon" href="/src/assets/favicon-32x32.png">
+
+
+
 </head>
 
 <body>
@@ -363,15 +370,46 @@
 
   <!-- Contacts -->
   <section id="contacts" class="contacts">
-    <div class="section section--no-separator">
+    <div class="section section--no-separator section--smaller-padding">
       <h2 class="section__subheader">Мои контакты</h2>
     </div>
-    <div class="container">
-      <h3 class="button"><a href="https://t.me/happysummerberries" class="button__text" role="button">
+    <div class="container container--smaller-padding">
+      <div class="contacts__form">
+        <h3 class="contacts__title">Оставьте мне сообщение</h3>
+        <form id="contact-form" class="form" method="post" action="contact-form.php">
+          <div class="form__group">
+            <label for="Name" class="form__label">Имя</label>
+            <div class="form__input-group">
+              <input type="text" id="Name" name="Name" class="form__input" required>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="Email" class="form__label">E-mail</label>
+            <div class="form__input-group">
+              <input type="email" id="Email" name="Email" class="form__input" required>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="Message" class="form__label">Сообщение</label>
+            <div class="form__input-group">
+              <textarea id="Message" name="Message" class="form__input" rows="6" maxlength="3000" required></textarea>
+            </div>
+          </div>
+          <div class="form__group">
+            <button type="submit" id="form-button"
+              class="form__button button button--smaller-margin button__text">Отправить</button>
+          </div>
+        </form>
+      </div>
+
+
+      <h3 class="contacts__title">Или свяжитесь со мной в Telegram</h3>
+      <h3 class="button button--medium-margin"><a href="https://t.me/happysummerberries" class="button__text"
+          role="button">
           Telegram <i class="fa-brands fa-telegram button__logo"></i>
         </a></h3>
-    </div>
 
+    </div>
   </section>
 
 

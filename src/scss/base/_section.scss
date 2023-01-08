@@ -74,6 +74,16 @@
         }
     }
 
+    //Reduces blank space in the contacts section
+    &--smaller-padding {
+        padding: 0%;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+
     // Media queries 
     @include responsive.below-1080 {
         &__flex-container {

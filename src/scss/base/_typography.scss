@@ -17,18 +17,21 @@ $black-weight: 900;
     font-size: 5rem;
     font-weight: $bold-weight;
     font-family: $header-font;
+    color: colors.$header;
 }
 
 @mixin sub-heading {
     font-size: 2rem;
     font-weight: $semi-bold-weight;
     font-family: $subheader-font;
+    color: colors.$regular;
 }
 
 @mixin sub-text {
     font-size: 1.4rem;
     font-weight: $normal-weight;
     font-family: $subheader-font;
+    color: colors.$light;
 }
 
 @mixin normal-text {

@@ -3,6 +3,7 @@
 
 .container {
     padding: 2% 10%;
+    margin: 1% 0% 2%;
     list-style: inside;
 
     &__normal-text {
@@ -11,6 +12,10 @@
 
     &--left-align {
         text-align: left;
+    }
+
+    &--smaller-padding {
+        padding: 0% 10% 2%;
     }
 
     @include responsive.above-1080 {

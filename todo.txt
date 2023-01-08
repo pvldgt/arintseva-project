@@ -1,25 +1,20 @@
 [] make the focused element stand out somehow, style it according to the general design color palette etc
 [] each of the link should get highlighted depending on where the user scrolls
 [] read how to make the website accessible - adding some attributes 
-[1] add dimming to the background color of the greeting when mobile menu is open 
 [] English and Russian versions, link rel canonical and alternate 
 [] add proper comments to everything 
-[] add media queries / make the website responsive 
-[] create _responisve and move create media query sizes 
 
-[] make sure that all sections and containers are consistent 
-[] determine the breakpoints
-[] add media queries for the resume grid 
 
 [] JS doesn’t work in build 
 [] Should I somehow hide the resume a little so that it doesn't take up so much space? 
-[] Try to make the footer same color as navbar 
-[] Rename grid container to flex container? 
 
 [?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
 
-[] make sure all text based divs have h1-h6
 [] contact me form 
+Options: 
+Google Form, 
+SMTPJS https://www.youtube.com/watch?v=sGQSz22U8VM 
+PHP https://www.youtube.com/watch?v=Iv93yjdvkWI
 
 
 [x] 'add english/russian' flags to the menu
@@ -52,7 +47,12 @@
 [x] fix typos, on mobile the word 'certificates' has to be left aligned 
 [x] add whote space for english and psychology sections on the sides 
 
+[x] Try to make the footer same color as navbar 
+
 05.12 
 [x] section card style
 [x] fix button margin 
 [x] add edited text 
+[x] make sure all text based divs have h1-h6
+[x] create mixins for media queries and add it where needed
+
