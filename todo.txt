@@ -5,7 +5,6 @@
 [] add proper comments to everything 
 
 
-[] JS doesn’t work in build 
 [] Should I somehow hide the resume a little so that it doesn't take up so much space? 
 
 [?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
@@ -15,7 +14,39 @@ Options:
 Google Form, 
 SMTPJS https://www.youtube.com/watch?v=sGQSz22U8VM 
 PHP https://www.youtube.com/watch?v=Iv93yjdvkWI
+https://www.youtube.com/watch?v=4q0gYjAVonI
+https://www.w3schools.com/php/func_mail_mail.asp
+https://www.php.net/manual/en/function.mail.php
+https://mailtrap.io/blog/php-email-sending/
 
+09.12
+[x] fix the problem of navbar js not being built by adding [import '../navbar.js';] to main.js
+[x] fix the 'send' button causing movement to the section below by adding 1px pink border 
+
+05.12 
+[x] section card style
+[x] fix button margin 
+[x] add edited text 
+[x] make sure all text based divs have h1-h6
+[x] create mixins for media queries and add it where needed
+
+25.12
+[x] take a look at how to do gh pages 
+[x] managed to build the EN version into build and upload to github pages
+[x] fix typos, on mobile the word 'certificates' has to be left aligned 
+[x] add whote space for english and psychology sections on the sides 
+[x] Try to make the footer same color as navbar 
+
+22.12
+[x] moved text styles from mixins back to typography 
+[x] added classes to h1-h6 and p
+
+20.12
+[x] move mixins into the base
+[x] create separate partials for each section 
+[x] remove header element as it was redundant
+[x] make the nav bar sticky without parent-for-sticky
+[x] decided to keep the original line-height set in the reset partial even in the resume section, as it looks the best 
 
 [x] 'add english/russian' flags to the menu
 [x] add burger button to the menu / js
@@ -32,27 +63,6 @@ PHP https://www.youtube.com/watch?v=Iv93yjdvkWI
 [x] make the menu appear from top right, not just right 
 [x] research 'focus' / vs 'active'
 [x] added :active on navbar links 
-20.12
-[x] move mixins into the base
-[x] create separate partials for each section 
-[x] remove header element as it was redundant
-[x] make the nav bar sticky without parent-for-sticky
-[x] decided to keep the original line-height set in the reset partial even in the resume section, as it looks the best 
-22.12
-[x] moved text styles from mixins back to typography 
-[x] added classes to h1-h6 and p
-25.12
-[x] take a look at how to do gh pages 
-[x] managed to build the EN version into build and upload to github pages
-[x] fix typos, on mobile the word 'certificates' has to be left aligned 
-[x] add whote space for english and psychology sections on the sides 
 
-[x] Try to make the footer same color as navbar 
 
-05.12 
-[x] section card style
-[x] fix button margin 
-[x] add edited text 
-[x] make sure all text based divs have h1-h6
-[x] create mixins for media queries and add it where needed
 

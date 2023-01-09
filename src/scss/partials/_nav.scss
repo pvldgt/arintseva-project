@@ -13,6 +13,13 @@
     z-index: 9999;
 
 
+    &__logo-wrapper {
+        width: 300px;
+        margin-left: 3%;
+        border: solid 3px rgb(255, 255, 255);
+        border-radius: 20px;
+        background-color: rgba(244, 250, 255, 0.483);
+    }
 
     // The ratio of logo to links is 1 to 4
     &__logo {
@@ -22,15 +29,11 @@
         font-weight: 700;
         // Give this padding so that the border doesn't get too close on some screen sizes
         padding: 5px 10px;
-        margin-left: 3%;
-        flex: 1;
-        border: solid 3px rgb(255, 255, 255);
-        border-radius: 20px;
-        background-color: rgba(244, 250, 255, 0.483);
+
     }
 
     &__wrapper {
-        flex: 4;
+        flex: 1;
     }
 
     &__menu {
@@ -103,27 +106,30 @@
         text-decoration: none;
     }
 
-    // By default the hamburger is hidden
+
     &__hamburger {
+        // By default the hamburger is hidden
         display: none;
         margin-right: 1%;
         border: none;
         text-decoration: none;
         background: none;
+
+        // Styling the lines that appear as the hamburger button
+        &-bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            border-radius: 2px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: base.$header;
+        }
     }
 
-    // Styling the lines that appear as the hamburger button
-    &__hamburger-bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        border-radius: 2px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background-color: base.$header;
-    }
 
-    // Make it responsive, the hamburger menu will appear once the screen is mobile size
+
+    // Make it responsive, the hamburger menu will appear once the screen is medium sized
     @include base.medium-screens {
 
         // Change the logo to wrapper ratio in the flexbox
@@ -177,21 +183,25 @@
         }
 
         // Modify the hamburger lines
-        // Line 2
-        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(2) {
-            opacity: 0;
-        }
+        &__hamburger {
+            .navbar--active & {
 
-        // Line 1
-        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
+                // Line 1
+                &-bar:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
 
-        // Line 3
-        &__hamburger.navbar--active .navbar__hamburger-bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
+                // Line 2
+                &-bar:nth-child(2) {
+                    opacity: 0;
+                }
 
+                // Line 3
+                &-bar:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
 
         // This makes the hamburger links dark, bold and with the underline on hover. 
         &__link:hover {

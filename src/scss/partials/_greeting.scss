@@ -10,6 +10,27 @@
         gap: 1%;
         margin: 1% auto 3%;
 
+        // Add display flex and center so that the text bits take as much vertical space as the image
+        &-text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+        }
+
+        // Space around the text elements 
+        &-text>* {
+            padding: 1%;
+        }
+
+        &-img {
+            align-self: center;
+            justify-self: center;
+            width: 90%;
+
+        }
+
         @include base.above-1080 {
             max-width: 1380px;
 
@@ -17,28 +38,13 @@
 
     }
 
-    // Add display flex and center so that the text bits take as much vertical space as the image
-    &__grid-text {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-content: center;
-    }
-
-    // Space around the text elements 
-    &__grid-text>* {
-        padding: 1%;
-    }
 
     &__heading {
         @include base.main-heading;
-        // color: base.$header;
     }
 
     &__sub-heading {
         @include base.sub-heading;
-        // color: base.$regular;
         padding: 1% 5%;
     }
 
@@ -47,12 +53,7 @@
 
     }
 
-    &__grid-img {
-        align-self: center;
-        justify-self: center;
-        width: 90%;
 
-    }
 
     @include base.below-1080 {
         max-width: 680px;

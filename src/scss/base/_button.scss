@@ -33,6 +33,10 @@
     }
 
     &--smaller-margin {
-        margin: 5px auto;
+        margin: 0.1em auto;
+
+        &:hover {
+            border: 1px solid colors.$pink-accent;
+        }
     }
 }

@@ -27,8 +27,10 @@
 
 <body>
   <nav class="navbar navbar--margin" role="navigation">
-    <div class="navbar__logo">Мария Аринцева</div>
-    <div class="navbar__wrapper">
+    <div class="navbar__logo-wrapper">
+      <div class="navbar__logo">Мария Аринцева</div>
+    </div>
+    <div class="navbar__menu-wrapper">
       <ul class="navbar__menu">
         <li class="navbar__item">
           <a id="resume-link" class="navbar__link" aria-current="page" href="#resume">Обо мне</a>
@@ -386,7 +388,13 @@
           <div class="form__group">
             <label for="Email" class="form__label">E-mail</label>
             <div class="form__input-group">
-              <input type="email" id="Email" name="Email" class="form__input" required>
+              <input type="email" id="Email" name="Email" class="form__input" placeholder="example@gmail.com" required>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="Phone" class="form__label">Телефон</label>
+            <div class="form__input-group">
+              <input type="text" id="Phone" name="Phone" class="form__input" placeholder="+7(916)123-45-67">
             </div>
           </div>
           <div class="form__group">
