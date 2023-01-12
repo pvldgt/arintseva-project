@@ -29,11 +29,11 @@
     }
 
     &--medium-margin {
-        margin: 20px auto 0px;
+        margin: 1.5rem auto 0px;
     }
 
     &--smaller-margin {
-        margin: 0.1em auto;
+        margin: 1rem auto 0;
 
         &:hover {
             border: 1px solid colors.$pink-accent;
