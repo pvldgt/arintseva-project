@@ -12,40 +12,89 @@
     // this is needed because otherwise absolutely and relatively positioned elements in the resume see though the header
     z-index: 9999;
 
-
     &__logo-wrapper {
         width: 300px;
         margin-left: 3%;
-        border: solid 3px rgb(255, 255, 255);
         border-radius: 20px;
         background-color: rgba(244, 250, 255, 0.483);
+        box-shadow:
+            0 0 10px rgba(244, 250, 255, 0.663);
+
+        // Change the logo box width on smaller screens
+        @include base.average-screens {
+            width: 200px;
+        }
+
+        @include base.medium-screens {
+            width: 250px;
+        }
     }
 
-    // The ratio of logo to links is 1 to 4
+
     &__logo {
         font-family: base.$header-font;
         color: base.$pink-accent;
         font-size: 3rem;
         font-weight: 700;
         // Give this padding so that the border doesn't get too close on some screen sizes
-        padding: 5px 10px;
+        padding: 2px 5px;
 
+        // Change the logo text size on smaller screens
+        @include base.average-screens {
+            font-size: 2rem;
+        }
+
+        @include base.medium-screens {
+
+            font-size: 2.5rem;
+        }
     }
 
-    &__wrapper {
+
+    &__menu-wrapper {
         flex: 1;
     }
+
 
     &__menu {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @include base.medium-screens {
+            // Make the menu vertical with columns and initially hide it off the screen 
+            position: fixed;
+            // Keep the menu off screen for now with left and top values
+            left: 110%;
+            top: -5%;
+            flex-direction: column;
+            background-color: base.$yellow;
+            width: 80%;
+            border-radius: 10px;
+            transition: 0.4s;
+            box-shadow:
+                0 10px 17px rgba(0, 0, 0, 0.207);
+
+            // The --active modifier brings out the mobile menu and turns the hamburger lines into a cross
+            &.navbar--active {
+                // This brings the menu to the screen from top right corner
+                left: 10%;
+                top: 12%;
+            }
+        }
     }
+
 
     &__item {
         padding: 0.9%;
         list-style: none;
+
+        @include base.medium-screens {
+            padding: 1%;
+            margin: 1.4rem 0;
+        }
     }
+
 
     &__link {
         font-family: base.$subheader-font;
@@ -55,49 +104,68 @@
         text-decoration: none;
         position: relative;
 
-    }
+        @include base.average-screens {
+            font-size: 1rem;
+            font-weight: 400;
+        }
 
-    // Create an invisible line under the link
-    &__link::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        bottom: -5px;
-        left: 0;
-        background-color: #fff;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.4s ease-in-out;
-    }
-
-    // Make it visible when the user hovers 
-    &__link:hover::before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
-
-    // Make the link text white and bold on hover 
-    &__link:hover {
-        color: base.$white;
-        font-weight: 700;
-    }
-
-    // Style the active link 
-    &__link:hover:active {
-
-        // For now choosing this style - the underline moves to the top when :active
+        // Create an invisible line under the link
         &::before {
-            transition: none;
-            bottom: 25px;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fff;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.4s ease-in-out;
+
+            @include base.medium-screens {
+                background-color: base.$header;
+            }
+        }
+
+        // Make the invisible line visible when the user hovers 
+        &:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        // On hover make the link text white and bold 
+        &:hover {
+            color: base.$white;
+            font-weight: 700;
+
+            // On hover in the hamburger menu make the hamburger links dark, bold and with the underline 
+            @include base.medium-screens {
+                color: base.$header;
+                font-weight: 700;
+            }
+
+            // Style the active link 
+            &:active {
+
+                // For now choosing this style - the underline moves to the top when :active
+                &::before {
+                    transition: none;
+                    bottom: 25px;
+                }
+            }
+        }
+    }
+
+
+    &--flag {
+        font-size: 2rem;
+
+        @include base.average-screens {
+            font-size: 1.3rem;
         }
     }
 
     // Add this to make sure the flags don't get any underline 
-    &--flag {
-        font-size: 2rem;
-    }
-
     &--flag:hover::before {
         visibility: hidden;
     }
@@ -115,75 +183,13 @@
         text-decoration: none;
         background: none;
 
-        // Styling the lines that appear as the hamburger button
-        &-bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            border-radius: 2px;
-            margin: 5px auto;
-            transition: all 0.3s ease-in-out;
-            background-color: base.$header;
-        }
-    }
-
-
-
-    // Make it responsive, the hamburger menu will appear once the screen is medium sized
-    @include base.medium-screens {
-
-        // Change the logo to wrapper ratio in the flexbox
-
-        &__logo {
-            font-size: 2rem;
-            flex: 2;
-        }
-
-        &__wrapper {
-            flex: 1;
-        }
-
-        // Now that the size of the screen is smaller we make the hamburger button visible
-        &__hamburger {
+        // The hamburger menu will appear once the screen is medium sized
+        @include base.medium-screens {
+            // Now that the size of the screen is smaller we make the hamburger button visible
             display: block;
             cursor: pointer;
-        }
 
-        // Make the menu vertical ith columns and initially hide it off the screen 
-        &__menu {
-            position: fixed;
-            // Keep the menu off screen for now with left and top values
-            left: 110%;
-            top: -5%;
-            flex-direction: column;
-            background-color: base.$yellow;
-            width: 80%;
-            border-radius: 10px;
-            transition: 0.4s;
-            box-shadow:
-                0 10px 17px rgba(0, 0, 0, 0.207);
-        }
-
-        // Bring the menu to the screen once the user presses the hamburger
-        &__menu.navbar--active {
-            left: 10%;
-        }
-
-        &__item {
-            padding: 1%;
-            list-style: none;
-            margin: 1.4rem 0;
-        }
-
-        // The --active modifier brings out the mobile menu and turns the hamburger lines into a cross
-        &__menu.navbar--active {
-            // This brings the menu to the screen from top right corner
-            left: 10%;
-            top: 12%;
-        }
-
-        // Modify the hamburger lines
-        &__hamburger {
+            // Modify the hamburger lines
             .navbar--active & {
 
                 // Line 1
@@ -201,38 +207,18 @@
                     transform: translateY(-8px) rotate(-45deg);
                 }
             }
+
         }
 
-        // This makes the hamburger links dark, bold and with the underline on hover. 
-        &__link:hover {
-            color: base.$header;
-            font-weight: 700;
-        }
-
-        &__link::before {
+        // Styling the lines that appear as the hamburger button
+        &-bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            border-radius: 2px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
             background-color: base.$header;
         }
     }
-
-    // Media query for middle size screen that was making the logo too big and made the header take too much space 
-    @include base.average-screens {
-        &__logo {
-            font-size: 1.8rem;
-            flex: 1;
-        }
-
-        &__wrapper {
-            flex: 5;
-        }
-
-        &__link {
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        &--flag {
-            font-size: 1.3rem;
-        }
-    }
-
 }

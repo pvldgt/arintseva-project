@@ -46,7 +46,7 @@
         </li>
         <li class="navbar__item">
           <a id="russian-language-link" class="navbar__link navbar--flag" href="index.html">🇷🇺</a>
-          <a id="english-language-link-link" class="navbar__link navbar--flag" href="en-version.html">🇬🇧</a>
+          <a id="english-language-link-link" class="navbar__link navbar--flag" href="/">🇬🇧</a>
         </li>
       </ul>
     </div>
@@ -380,15 +380,15 @@
         <h3 class="contacts__title">Оставьте мне сообщение</h3>
         <form id="contact-form" class="form" method="post" action="contact-form.php">
           <div class="form__group">
-            <label for="Name" class="form__label">Имя</label>
+            <label for="Name" class="form__label form--required">Имя</label>
             <div class="form__input-group">
               <input type="text" id="Name" name="Name" class="form__input" required>
             </div>
           </div>
           <div class="form__group">
-            <label for="Email" class="form__label">E-mail</label>
+            <label for="Email" class="form__label form--required">E-mail</label>
             <div class="form__input-group">
-              <input type="email" id="Email" name="Email" class="form__input" placeholder="example@gmail.com" required>
+              <input type="email" id="Email" name="Email" class="form__input " placeholder="example@gmail.com" required>
             </div>
           </div>
           <div class="form__group">
@@ -398,7 +398,7 @@
             </div>
           </div>
           <div class="form__group">
-            <label for="Message" class="form__label">Сообщение</label>
+            <label for="Message" class="form__label form--required">Сообщение</label>
             <div class="form__input-group">
               <textarea id="Message" name="Message" class="form__input" rows="6" maxlength="3000" required></textarea>
             </div>
@@ -428,6 +428,7 @@
   </footer>
 
   <script src="navbar.js"></script>
+  <script src="mailer.js"></script>
 
 </body>
 

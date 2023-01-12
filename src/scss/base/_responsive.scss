@@ -1,6 +1,6 @@
 // Media queries are used in container, section, greeting, nav, resume 
 
-// Huge screens 
+// Huge screens above 1600 px
 @mixin large-screens {
     @media only screen and (min-width: 1600px) {
         @content;
@@ -21,21 +21,21 @@
     }
 }
 
-// Average size 
+// Average size from 951 to 1290 px
 @mixin average-screens {
     @media only screen and (min-width: 951px) and (max-width: 1290px) {
         @content;
     }
 }
 
-// Medium screens
+// Medium screens up to 950
 @mixin medium-screens {
     @media only screen and (max-width: 950px) {
         @content;
     }
 }
 
-// Small screens
+// Small screens up to 500 px
 @mixin small-screens {
     @media only screen and (max-width: 500px) {
         @content;

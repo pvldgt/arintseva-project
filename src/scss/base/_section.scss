@@ -4,10 +4,13 @@
 
 // Section styling 
 .section {
-
+    @include mixins.section-title;
     padding: 1.5% 3.5%;
 
-    @include mixins.section-title;
+    @include responsive.above-1080 {
+        max-width: 1380px;
+        margin: auto;
+    }
 
     &__subheader {
         @include mixins.subheader;
@@ -36,7 +39,14 @@
         border-radius: 30px;
         padding: 7%;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @include responsive.below-1080 {
+            flex-direction: column;
+            row-gap: 1.2rem;
+        }
+
     }
+
 
     // Setting of each flex item 
     &__flex-item {
@@ -64,6 +74,15 @@
         text-align: left;
     }
 
+    // On small screens make the text center aligned again
+    @include responsive.below-1080 {
+
+        &--right-align,
+        &--left-align {
+            text-align: center;
+        }
+    }
+
     &--no-separator {
         padding: 1.5% 12.5%;
 
@@ -82,25 +101,4 @@
             content: none;
         }
     }
-
-    // Media queries 
-    @include responsive.below-1080 {
-        &__flex-container {
-            flex-direction: column;
-            row-gap: 1.2rem;
-        }
-
-        // On small screens make the text center aligned again
-        &--right-align,
-        &--left-align {
-            text-align: center;
-        }
-
-    }
-
-    @include responsive.above-1080 {
-        max-width: 1380px;
-        margin: auto;
-    }
-
 }

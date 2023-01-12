@@ -19,11 +19,33 @@ https://www.w3schools.com/php/func_mail_mail.asp
 https://www.php.net/manual/en/function.mail.php
 https://mailtrap.io/blog/php-email-sending/
 
-09.12
+[] Media queries location 
+[] Mailjet integration 
+[?] folders scss, maybe restructure?  https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/7-1-sass-architecture
+[] only show part of the resume section and give an option to expand
+[] add some space after the send button in the contact form on mobile 
+[] more margin before мои контакns on mobile 
+
+12.01
+[x] Adding more nesting in nav.scss
+[x] Adding media queries where they belong, nesting them under each appropriate selector 
+
+11.01
+[x] Added 'required' * with ::after
+[] Bought domain and hosting
+
+09.01
 [x] fix the problem of navbar js not being built by adding [import '../navbar.js';] to main.js
 [x] fix the 'send' button causing movement to the section below by adding 1px pink border 
+[x] phone and placeholders in the form 
+[x] add the nesting to the hamburger lines as advised by Jeroen
+[x] add nesting to __grid (-text> ;-text*;-img) as advised by Jeroen
+[x] look for more opportunities for nesting, done in some more places 
+[x] add glow to logo box
+[x] Fixed logo and menu wrapper flex 1 
 
-05.12 
+
+05.01 
 [x] section card style
 [x] fix button margin 
 [x] add edited text 

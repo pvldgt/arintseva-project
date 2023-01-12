@@ -3,30 +3,27 @@
 .contacts {
     background: base.$light-blue;
 
+    // Leave some space between the contacts and the footer
+    @include base.small-screens {
+        padding: 2% 3% 5%;
+    }
+
 
     &__title {
         @include base.sub-heading;
         color: base.$regular;
         padding: 0.5% 2%;
+
+        // Make the font smaller on smaller screens 
+        @include base.small-screens {
+            font-size: 23px;
+        }
     }
 
     &__form {
         margin: 1% auto 3%;
 
     }
-
-    //Media query
-    @include base.small-screens {
-        // Leave some space between the contacts and the footer
-        padding: 2% 3% 5%;
-
-        // Make the font smaller on smaller screens 
-        &__title {
-            font-size: 23px;
-        }
-    }
-
-
 }
 
 .form {
@@ -45,6 +42,11 @@
 
     &__label {
         @include base.sub-text;
+
+        // Make the font smaller on smaller screens 
+        @include base.small-screens {
+            font-size: 18px;
+        }
     }
 
     &__input {
@@ -54,25 +56,18 @@
         background-color: base.$blue;
         border: solid 1px base.$light;
         border-radius: 15px;
-    }
 
-
-    // Make the font smaller on smaller screens 
-    @include base.medium-screens {
-        &__input {
+        // Make the input width bigger than 50% on smaller screens 
+        @include base.medium-screens {
             width: 70%;
         }
-    }
 
-    @include base.small-screens {
-        &__label {
-            font-size: 18px;
-        }
-
-        &__input {
+        @include base.small-screens {
             width: 80%;
         }
     }
 
-
+    &--required::after {
+        content: "*";
+    }
 }
