@@ -13,17 +13,20 @@ const expanderSvg = document.querySelector(".resume__expander-svg");
 expanderButton.addEventListener("click", expand);
 // expanderButton.addEventListener("click", collapse);
 
+import imgUp from '/src/assets/circle-arrow-direction-up-upload-svgrepo-com.svg'
+import imgDown from '/src/assets/circle-arrow-direction-download-down-svgrepo-com.svg'
+
 // function that adds/removes the prview modifier class on click
 function expand() {
     resume.classList.toggle("resume--preview");
     expander.classList.toggle("resume--preview");
     // Add if statement to add + or -
     if (expander.classList.contains("resume--preview")) {
-        expanderSvg.src = "src/assets/circle-arrow-direction-up-upload-svgrepo-com.svg";
+        expanderSvg.src = imgUp;
         expanderSvg.alt = "arrow up";
 
     } else {
-        expanderSvg.src = "src/assets/circle-arrow-direction-download-down-svgrepo-com.svg";
+        expanderSvg.src = imgDown;
         expanderSvg.alt = "arrow down";
         resume.scrollIntoView();
 
