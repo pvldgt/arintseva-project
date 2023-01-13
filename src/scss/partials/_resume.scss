@@ -3,6 +3,65 @@
 .resume {
     background-image: base.$blue-pink-circle;
 
+    // Set the vh for the preview mode
+    &--preview {
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    &__expander {
+        // === center the + and -
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        // ===
+
+        color: black;
+        position: relative;
+        top: -120px;
+        padding: 0;
+        height: 120px;
+        width: 100%;
+        background: base.$transparent-to-yellow;
+        // This helps get rid of the empty space left after moving the expander up
+        margin-bottom: -120px;
+
+        &-svg {
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                width: 50px;
+                height: 50px;
+                // transform: translateY(10px);
+                // transition: transform 0.2s ease-in;
+                animation: action 0.4s infinite alternate;
+
+                @keyframes action {
+                    0% {
+                        transform: translateY(0px);
+                    }
+
+                    100% {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+
+        // &-button:hover {
+        //     transform: translateY(-10px);
+        // }
+
+    }
+
+
+    // &.resume--preview {
+    //     top: 0px;
+    //     margin-bottom: 0px;
+    // }
+
+
     &__grid-container {
         display: flex;
         flex-direction: row;

@@ -90,19 +90,10 @@
         &::after {
             content: " ";
         }
-    }
 
-    // Reduces blank space in the contacts section
-    &--smaller-padding {
-        padding: 2% 0% 1%;
-
-        @include responsive.medium-screens {
-            padding: 5% 0% 3%;
-        }
-
-        &::before,
-        &::after {
-            content: none;
+        @include responsive.small-screens {
+            padding-top: 20px;
         }
     }
+
 }
