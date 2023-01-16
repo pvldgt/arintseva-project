@@ -1,0 +1,15 @@
+@use 'colors';
+
+.gradient {
+
+    &__english {
+        height: 50px;
+        background: colors.$yellow-to-pink;
+    }
+
+    &__psychology {
+        height: 50px;
+        background: colors.$pink-to-blue;
+    }
+
+}

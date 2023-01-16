@@ -2,26 +2,19 @@
 [] each of the link should get highlighted depending on where the user scrolls
 [] read how to make the website accessible - adding some attributes 
 [] English and Russian versions, link rel canonical and alternate 
-[] add proper comments to everything 
 
+16.01 
+[x] Add gradient between sections 
+[x] Center the SVG by adding margin auto 
+[x] Decided not to fill the SVG 
+[x] Implemented the contact form with EmailJS
 
-[] Should I somehow hide the resume a little so that it doesn't take up so much space? 
-
-[?] make the mobile nav bars into a button and accessible, drop the pre-added styles, ?alt text?
-
-[] contact me form 
-Options: 
-Google Form, 
-SMTPJS https://www.youtube.com/watch?v=sGQSz22U8VM 
-PHP https://www.youtube.com/watch?v=Iv93yjdvkWI
-https://www.youtube.com/watch?v=4q0gYjAVonI
-https://www.w3schools.com/php/func_mail_mail.asp
-https://www.php.net/manual/en/function.mail.php
-https://mailtrap.io/blog/php-email-sending/
-
-[] Mailjet integration 
-[?] folders scss, maybe restructure?  https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/7-1-sass-architecture
-[] only show part of the resume section and give an option to expand
+13.01
+[x] Start working on the collapse functionality of the resume section 
+[x] Find SVG circles with + and -
+[x] Figure out a way to integrate if statement into the JS to change between + and -
+[x] scroll back to the + when you press -
+[x] Expand/collapse works as intended 
 
 12.01
 [x] Adding more nesting in nav.scss

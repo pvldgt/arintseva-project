@@ -10,7 +10,7 @@
     }
 
     &__expander {
-        // === center the + and -
+        // === center the + and - button
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -27,6 +27,7 @@
         margin-bottom: -120px;
 
         &-svg {
+            margin: auto;
             width: 40px;
             height: 40px;
 
@@ -40,26 +41,20 @@
                 @keyframes action {
                     0% {
                         transform: translateY(0px);
+
                     }
 
                     100% {
+
                         transform: translateY(-10px);
+
                     }
                 }
             }
         }
 
-        // &-button:hover {
-        //     transform: translateY(-10px);
-        // }
-
     }
 
-
-    // &.resume--preview {
-    //     top: 0px;
-    //     margin-bottom: 0px;
-    // }
 
 
     &__grid-container {

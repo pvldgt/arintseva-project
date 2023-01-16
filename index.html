@@ -20,9 +20,6 @@
   <title>Мария Аринцева</title>
   <!--   Favicon-->
   <link rel="icon" type="image/x-icon" href="/src/assets/favicon-32x32.png">
-
-
-
 </head>
 
 <body>
@@ -187,7 +184,7 @@
           <h4 class="resume__sub-heading"> Высшая школа экономики (НИУ ВШЭ)</h4>
           <h4 class="resume__location">📍Москва, Россия</h4>
           <h5 class="resume__year">2016</h5>
-          <p class="resume__normal-text">Участие в создании и ведении языкового курса по книгами и фильмам "Гарри
+          <p class="resume__normal-text">Участие в создании и ведении языкового курса по книгам и фильмам "Гарри
             Поттер"</p>
         </div>
         <div class="resume__item">
@@ -279,7 +276,6 @@
   </section>
 
   <div class="resume__expander">
-    <!-- <button class="resume__expander-button"><i class="fa-regular fa-circle-plus"></i></button> -->
     <div class="resume__expander-button">
       <img class="resume__expander-svg" src="src/assets/circle-arrow-direction-download-down-svgrepo-com.svg"
         alt="arrow down">
@@ -323,10 +319,10 @@
         <li>Подготовка к KETFCE, CAE</li>
         <li>Подготовка к ОГЭ, ЕГЭ</li>
       </ul>
-
     </div>
   </section>
 
+  <div class="gradient__english"> </div>
 
   <!-- Psychology  -->
   <section id="psychology" class="psychology">
@@ -376,6 +372,7 @@
     </div>
   </section>
 
+  <div class="gradient__psychology"> </div>
 
   <!-- Contacts -->
   <section id="contacts" class="contacts">
@@ -387,34 +384,34 @@
     <div class="container container--smaller-padding">
       <div class="contacts__form">
         <h3 class="contacts__title">Оставьте мне сообщение</h3>
-        <form id="contact-form" class="form" method="post" action="contact-form.php">
+        <form id="contact-form" class="form">
           <div class="form__group">
-            <label for="Name" class="form__label form--required">Имя</label>
+            <label for="name" class="form__label form--required">Имя</label>
             <div class="form__input-group">
-              <input type="text" id="Name" name="Name" class="form__input" required>
+              <input type="text" id="name" name="name" class="form__input" required>
             </div>
           </div>
           <div class="form__group">
-            <label for="Email" class="form__label form--required">E-mail</label>
+            <label for="email" class="form__label form--required">E-mail</label>
             <div class="form__input-group">
-              <input type="email" id="Email" name="Email" class="form__input " placeholder="example@gmail.com" required>
+              <input type="email" id="email" name="email" class="form__input " placeholder="example@gmail.com" required>
             </div>
           </div>
           <div class="form__group">
-            <label for="Phone" class="form__label">Телефон</label>
+            <label for="phone" class="form__label">Телефон</label>
             <div class="form__input-group">
-              <input type="text" id="Phone" name="Phone" class="form__input" placeholder="+7(916)123-45-67">
+              <input type="text" id="phone" name="phone" class="form__input" placeholder="+7(916)123-45-67">
             </div>
           </div>
           <div class="form__group">
-            <label for="Message" class="form__label form--required">Сообщение</label>
+            <label for="message" class="form__label form--required">Сообщение</label>
             <div class="form__input-group">
-              <textarea id="Message" name="Message" class="form__input" rows="6" maxlength="3000" required></textarea>
+              <textarea id="message" name="message" class="form__input" rows="6" maxlength="3000" required></textarea>
             </div>
           </div>
           <div class="form__group">
-            <button type="submit" id="form-button"
-              class="form__button button button--smaller-margin button__text">Отправить</button>
+            <input type="submit" id="form-button" class="form__button button button--smaller-margin button__text"
+              value="Отправить">
           </div>
         </form>
       </div>
@@ -436,9 +433,11 @@
     </div>
   </footer>
 
+
+  <script src="resume-expander.js"></script>
   <script src="navbar.js"></script>
   <script src="mailer.js"></script>
-  <script src="resume-expander.js"></script>
+  <!-- <script src="emailjs_key.js"></script> -->
 
 </body>
 

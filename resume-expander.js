@@ -8,15 +8,14 @@ const expanderButton = document.querySelector(".resume__expander-button");
 const expanderSvg = document.querySelector(".resume__expander-svg");
 
 
-
 // add event listener to the expander button on click
 expanderButton.addEventListener("click", expand);
-// expanderButton.addEventListener("click", collapse);
 
-import imgUp from '/src/assets/circle-arrow-direction-up-upload-svgrepo-com.svg'
-import imgDown from '/src/assets/circle-arrow-direction-download-down-svgrepo-com.svg'
+// Import SVGs
+import imgUp from '/src/assets/circle-arrow-direction-up-upload-svgrepo-com.svg';
+import imgDown from '/src/assets/circle-arrow-direction-download-down-svgrepo-com.svg';
 
-// function that adds/removes the prview modifier class on click
+// Function that adds/removes the prview modifier class on click
 function expand() {
     resume.classList.toggle("resume--preview");
     expander.classList.toggle("resume--preview");
