@@ -39,4 +39,8 @@
             border: 1px solid colors.$pink-accent;
         }
     }
+
+    &--disabled {
+        background: colors.$light;
+    }
 }

@@ -3,6 +3,9 @@
 [] read how to make the website accessible - adding some attributes 
 [] English and Russian versions, link rel canonical and alternate 
 
+17.01
+[x] Prevent user from submitting the form multiple times
+
 16.01 
 [x] Add gradient between sections 
 [x] Center the SVG by adding margin auto 

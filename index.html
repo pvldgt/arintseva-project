@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="./src/main.js"></script>
   <!-- English version available, MUST BE A FULL LINK  -->
-  <!-- <link rel=”alternate” href=”en-version.html” hreflang=”en” /> -->
-  <!-- <link rel=”alternate” href=”index.html” hreflang=”ru” /> -->
+  <link rel=”alternate” href=”happymaary.ru/en” hreflang=”en” />
+  <link rel=”alternate” href=”happymaary.ru” hreflang=”ru” />
 
   <!--   Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,17 @@
   <title>Мария Аринцева</title>
   <!--   Favicon-->
   <link rel="icon" type="image/x-icon" href="/src/assets/favicon-32x32.png">
+
+
+  <!-- Script for EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      // This is the public key 
+      emailjs.init("FhieyttOdI8JteqJU");
+    })();
+  </script>
 </head>
 
 <body>
@@ -43,7 +54,7 @@
         </li>
         <li class="navbar__item">
           <a id="russian-language-link" class="navbar__link navbar--flag" href="index.html">🇷🇺</a>
-          <a id="english-language-link-link" class="navbar__link navbar--flag" href="/">🇬🇧</a>
+          <a id="english-language-link-link" class="navbar__link navbar--flag" href="en.html">🇬🇧</a>
         </li>
       </ul>
     </div>
@@ -436,8 +447,7 @@
 
   <script src="resume-expander.js"></script>
   <script src="navbar.js"></script>
-  <script src="mailer.js"></script>
-  <!-- <script src="emailjs_key.js"></script> -->
+  <script src="mailer-ru.js"></script>
 
 </body>
 
