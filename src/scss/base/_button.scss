@@ -40,6 +40,7 @@
         }
     }
 
+    // Changes the color of the Send button to grey to signal that it's disabled (to prevent multiple form submissions)
     &--disabled {
         background: colors.$light;
     }

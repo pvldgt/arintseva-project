@@ -68,6 +68,7 @@
         }
     }
 
+    // Add the asterisk after the required field names
     &--required::after {
         content: "*";
     }

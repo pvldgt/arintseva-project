@@ -9,7 +9,7 @@
     margin: 0;
     position: sticky;
     top: 0;
-    // this is needed because otherwise absolutely and relatively positioned elements in the resume see though the header
+    // This is needed because otherwise absolutely and relatively positioned elements in the resume see though the header
     z-index: 9999;
 
     &__logo-wrapper {

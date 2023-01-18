@@ -23,7 +23,7 @@
         height: 120px;
         width: 100%;
         background: base.$transparent-to-yellow;
-        // This helps get rid of the empty space left after moving the expander up
+        // This helps get rid of the empty space that is left after moving the expander up
         margin-bottom: -120px;
 
         &-svg {
@@ -34,8 +34,6 @@
             &:hover {
                 width: 50px;
                 height: 50px;
-                // transform: translateY(10px);
-                // transition: transform 0.2s ease-in;
                 animation: action 0.4s infinite alternate;
 
                 @keyframes action {
@@ -104,7 +102,6 @@
         &:hover {
             transition: all 0.4s ease-out;
             background-color: rgba(182, 212, 255, 0.305);
-            // background: radial-gradient(circle, rgba(255, 142, 221, 0.348) 0%, rgba(174, 147, 255, 0.31) 47%, rgba(155, 172, 255, 0.368) 79%, rgba(163, 240, 255, 0.289) 100%);
             border-radius: 15px;
         }
     }
@@ -162,5 +159,10 @@
         @include base.resume-organization;
         padding: 3px 7px;
         display: inline-block;
+    }
+
+    // Add padding-bottom to push down the collapser a little further below so that no text is covered with gradient 
+    &__certificate-container {
+        padding-bottom: 70px;
     }
 }
