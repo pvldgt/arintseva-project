@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <!-- English version available, MUST BE A FULL LINK  -->
+    <link rel=”alternate” href=”happymaary.ru/en” hreflang=”en” />
+    <link rel=”alternate” href=”happymaary.ru” hreflang=”ru” />
+
+    <!--   Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:wght@400;700;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--   Font Awesome-->
+    <script src="https://kit.fontawesome.com/6b0f9ce539.js" crossorigin="anonymous"></script>
+    <!--   Favicon-->
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAB5BJREFUWEe1l2twVGcZx//PObvJbnY3t00CUUMIuyFcUsKdYLWVtk5G1LbTJmDJbgrIUMexncEyzlRqBxXrjA58ANSSTiWTXYQCCYNKawczGlEsNL0RCKFJJAELhOxustkku5s95zzOOdlrc4F+8P22533e5/0993cJ/+flfOeOCSP6SwBbAPqIQA3z2nOO7d5Nino1fZ77ubtuI4i/CsZrZHddnupszfEraQahYIkI9qfNze9VZcb6PKeIsYiJ5hJAzGgJK8LTJzbk+u8bgHuc68E4E710AKK4hEoa7nwWwtns2QXGHu07YxTAX1mRf+PeMOvss6f6bQqLe8F4goGz7qesVdMC8PXN2ZCkAwDZQLwz3De2I73YVB2/kPFnlLoeJ/WapOU4PVBGEr4HpjkQ6CEw52nbhGaRxO/O/Th7uKfccxpE32JWNk4LIF+r3S+IwvMxiwP/8vSbluWUCxli4jrGNip1vTFdGGuOc1q66KsjKL8ESAX5ICQLjxh1ulnM450MfmtKgJv71hrzymf7DPPMhpjyyEBYCfeOCuaVucmZMwxRrKCSBi3WyYu7nFUQ6AnIypm6zv3tiCh/AbCQgZPup/NqnE2eGwCEKQH40Aq9X8j71FJpzReMCYvHLvshmnVIn2tK9kIr7LZHiHZrWa2FvqduPsAdYKiHx6HICx3tvxoXYHgfQAErvI6IXgRhwSQA7nb+CAxn+OaoLnI3vMC8ImExSwoCF7wwVeRoIIl84Bep1L0vDtBVtxbE55M88hOyu/Y4mr1biPn3AJqMHuszt79wW58CwF21lSDh37GDY+1DLGbqKb04YbHkCyP4yQjMq3NBMQcSglCUlVR6pEPzQOdWC/SRwagH1JBdIpurYvsh1getnk8ZMGZ4+3Lrn1sZSQEYPrZ+r2WF9Yex7sCRqMXLciCaEhYHO4dBOoLBbkkOexuGjF+mlfURDaLLeVV1cbQCGJK0iMqOdjqavCcIXM2yUureUNCdAjD026+/aliY+VJ6UUZcccQTRqhnBJbVaigmxFlmjFzwwrg4C7osfQKC+Kdkc++eAHC4QVSbtPkK2Rt/7jjp3UfEO8C8ylWd35YCMHqoqjACvmxea80VMxIWj3X4IaSLMNjMcX2SP4KxK35Y1lhBYlxNBLLyIJUdeY+7nDtAiOcFGFeo1FWu9QmZqkNS/69PbFg8Hj/Jf/uaDsVffHLs8nCVPCJvs6yyxstNtTjwrhemB7IgZiYsDnUHwBLDuCAzuSo6YQgtR1C/CoLYmlKbMi+lMvfHyd8SAN3OYwA2qt4LdvhBRpEMJUkWD40j2DEMc6U1nnysMEYuejUAXXZaXK8i80FB4F0QBF88EbW4YC+VunZOB3ALQKEmJzECFzwwLcmGaElYHPwkoDVeY1ki+XhcAemFuLeUsIKxjwYVwzzzQV1+2vcBSsSSMQBkF1HpgXAMIuGBHuerYLwU25AGx6Fmu1mNcbTcNIvV5CvLhC43YXG8/tU+cdGHtFmGlHxJCQPxVrK5D08G6PpGOsj6HkAPxDY1iwEY5ycslgMRSL5xJPeGRN/wa57IKM9KufMzP67C5lpMNDHEUhvR9U1LIYsXAGjmxS1emBrjqbSrYCNtPmR+JX8iJDMtUh4j25GWSQDapd21uwBhYp4DkIcjGG33w6ImX6LcJqlXw6WOlmRvTc9AB8neqE3aybNALceiL50DqDKmIPSfEahDKa3QOK3OwHkPjIvu7amogvNkdz0YB9h8+LpBzrTsZFk5prZHbZoxfwhgoiVy9M0R7YRTUfhb+pH50H24f+JwL9ldJXEA5/GBhyHS30H4heupvJejoXgeEPbPHMzoLgNDLf3IWlcwY5iSdN0gu6s4DlB3cnAZk/wBMx91V+dvihpN6HGcBejR+4Hwt96FZbVVC9V9rDayu1bFAbaeHrBEJBoE4PMYB4veXl+qNQrucc4B8yWAZqwrVXb0w0HoZxtmzJMksAayu7ZoANv/xBm49X4kmF/SCua1ioIXjtTkHYgJc3fts4DQcC+rxm8FMX4nBPPynHuJqtd+h+yNb2oAzibPf5nxriDQW8z8BgjDkoI1R6vzOhMQzlMAnpxJs9ozAv/0wLQ0O2VgTXHmLkSxmEoaQjGAYYD6bubmLivyedoAqgDjhgRUxSC421kAoF19z80EobZveURC8ntisjy9QPbGuIfJ2ez9BxiVUlgqUgQhK01P56IXBRQou3KN+fUH1lOYexzfBNMf1Zfsffh4OpFW2EKPEp2QYwLkaPI9R1BeA/Prrur87XXNA/MVBW8S0dKo0ADALQBd/7HtoHmBufsH8afR5yO5Atato9LDA8nHSPsvJ85SH6LLAaqXwtIrtwsLvHO8vjom3gZgNaA9r9VR/HJjxY4bEPA7MJLe5vci4behV2qp+A9qpaUsrRVvPjMyWwoFzxBIhVAfldeY+VqGt/cZaXaxIRRmm0A6i9fkvaiWKPdtmoeIsAeMGlDSvJ/M0QPwz2Bzu2LTb0oA9aPqiXSxcAsR14JZdf+wMc06v/7bNDadfdzrKISEx0HCGjAXgTgNTD6wchUQ3oHddi75D8tUev4Hju0Z2MOXjD0AAAAASUVORK5CYII=">
+
+    <title>Maria Arintseva</title>
+    <!-- Script for EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            // This is the public key 
+            emailjs.init("FhieyttOdI8JteqJU");
+        })();
+    </script>
+  <script type="module" crossorigin src="/arintseva-project/assets/mailer-en.30d2e199.js"></script>
+  <link rel="stylesheet" href="/arintseva-project/assets/mailer-en.989660ec.css">
+</head>
+
+<body>
+    <nav class="navbar navbar--margin" role="navigation">
+        <div class="navbar__logo-wrapper">
+            <div class="navbar__logo">Maria Arintseva</div>
+        </div>
+        <div class="navbar__menu-wrapper">
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a id="resume-link" class="navbar__link" aria-current="page" href="#resume">About me</a>
+                </li>
+                <li class="navbar__item">
+                    <a id="english-link" class="navbar__link" href="#english">Teaching English</a>
+                </li>
+                <li class="navbar__item">
+                    <a id="psychology-link" class="navbar__link" href="#psychology">Therapy</a>
+                </li>
+                <li class="navbar__item">
+                    <a id="contacts-link" class="navbar__link" href="#contacts">Contact Me</a>
+                </li>
+                <li class="navbar__item">
+                    <a id="russian-language-link" class="navbar__link navbar--flag" href="index.html">🇷🇺</a>
+                    <a id="english-language-link-link" class="navbar__link navbar--flag" href="en.html">🇬🇧</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="navbar__hamburger">
+            <span class="navbar__hamburger-bar"></span>
+            <span class="navbar__hamburger-bar"></span>
+            <span class="navbar__hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <!-- Main text and image -->
+    <section id="greeting" class="greeting">
+        <div class="greeting__grid">
+            <div class="greeting__grid-text">
+                <h1 class="greeting__heading">Hi 👋<br>
+                    My name is Maria</h1>
+                <h2 class="greeting__sub-heading"> ⸻ </h2>
+                <h2 class="greeting__sub-heading"> Teacher <br> Mentor <br> Therapist </h2>
+                <h2 class="greeting__sub-heading"> ⸻ </h2>
+                <h3 class="greeting__sub-text">I am a Teacher of English and a Gestalt Therapist</h3>
+                <h3 class="button"><a href="https://t.me/happysummerberries" class="button__text" role="button">
+                        Contact me <i class="fa-brands fa-telegram button__logo"></i>
+                    </a></h3>
+            </div>
+            <div class="greeting__grid-img">
+                <img class="greeting__image" src="/arintseva-project/assets/maria_main.b5ae783e.PNG" alt="main-image">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About me resume section -->
+    <section id="resume" class="resume resume--preview">
+        <div class="resume__section section">
+            <h2 class="section__subheader">About Me</h2>
+            <h3 class="section__subsub">Learn more about my education and work experience</h3>
+        </div>
+        <!-- 2 column grid container -->
+        <div class="resume__grid-container">
+            <!-- First column -->
+            <div class="resume__column">
+
+                <!-- About me -->
+                <h3 class="resume__heading">General information</h3>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Maria Aleksandrovna Arintseva</h4>
+                    <p class="resume__normal-text">I am from Moscow.
+                        <br>
+                        I dreamed of becoming an English teacher since childhood. Currently, I work at a school with
+                        talented and motivated children.
+                        <br>
+                        A few years ago I developed a professional interest in
+                        psychology and am currently training to become a gestalt therapist.
+                    </p>
+                    <p class="resume__normal-text">My hobbies:</p>
+                    <ul class="resume__normal-text">
+                        <li>Psychology, gestalt approach</li>
+                        <li>Drawing (acrylic, markers)</li>
+                        <li>Creating Christmas compositions</li>
+                        <li>Dancing</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <h3 class="resume__heading">Education</h3>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Moscow State Linguistic University</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2009-2014</h5>
+                    <p class="resume__normal-text">Linguist, Teacher of English and German<br>
+                        Theory and Methodology of Teaching</p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Charles University</h4>
+                    <h4 class="resume__location">📍Prague, Czechia</h4>
+                    <h5 class="resume__year">2013</h5>
+                    <p class="resume__normal-text">Internship at Institute of Translation Studies</p>
+
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Moscow Institute of Gestalt and Psychodrama</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2019-2020</h5>
+                    <p class="resume__normal-text">Gestalt Therapy. First Stage</p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Moscow Institute of Gestalt and Psychodrama</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2020-2024</h5>
+                    <p class="resume__normal-text">Gestalt Therapy. Second Stage</p>
+
+                </div>
+
+            </div>
+            <!-- Second column -->
+            <div class="resume__column">
+                <!-- Work experience -->
+                <h3 class="resume__heading">Work Experienceы</h3>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Letovo School</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2019 – Now</h5>
+                    <p class="resume__normal-text">
+                        English Teacher (Grades 7-9, MYP Phases 3-5, Phase 3 Leader)<br>
+                        Masterclasses: IELTS (Academic Module), Boost Your Speaking Skills<br>
+                        Mentor of Grade 7-9 Students
+                    </p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Moscow State Linguistic Univerity</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2014-2015 and 2016-2019</h5>
+                    <p class="resume__normal-text">
+                        English Teacher at the Faculties of German and French Languages (Bachelor and Second Higher
+                        Education Students)
+                    </p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Moscow State University</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2017-2018</h5>
+                    <p class="resume__normal-text"> Head English Teacher at the Faculty of Journalism (Bachelor and
+                        Master Students)
+                    </p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Russian Presidential Academy of National Economy and Public
+                        Administration</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2015-2017</h5>
+                    <p class="resume__normal-text">Teacher of German (Elective Course)</p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">Higher School of Economics</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2016</h5>
+                    <p class="resume__normal-text">English Teacher<br>
+                        Participated in Creating and Ran a Language Course Based on Harry Potter Books and Films
+                    </p>
+                </div>
+                <div class="resume__item">
+                    <h4 class="resume__sub-heading">LLC 'Moskovskiy Gid'</h4>
+                    <h4 class="resume__location">📍Moscow, Russia</h4>
+                    <h5 class="resume__year">2014</h5>
+                    <p class="resume__normal-text">Translator</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="resume__certificate-container">
+            <h3 class="resume__heading">Professional Certificates</h3>
+            <div class="resume__grid-container">
+
+                <div class="resume__column">
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Volunteering at a Summer Language School</h4>
+                        <h4 class="resume__organization">English Language School</h4>
+                        <h5 class="resume__year">2013</h5>
+                        <h4 class="resume__location">📍Nab Cottage, Ambleside, UK</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Certificate of Proficiency in English (CPE)</h4>
+                        <h4 class="resume__organization">Cambridge English</h4>
+                        <h5 class="resume__year">2014</h5>
+                        <h4 class="resume__location">📍Moscow, Russia</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">CELTA</h4>
+                        <h4 class="resume__organization">Cambridge School</h4>
+                        <h5 class="resume__year">2016</h5>
+                        <h4 class="resume__location">📍Granollers, Spain</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">From Words to Grammar</h4>
+                        <h4 class="resume__organization">Leo Selivan</h4>
+                        <h5 class="resume__year">2019</h5>
+                        <h4 class="resume__location">📍Minsk, Belarus</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">IB Professional Development: Language Acquisition MYP (Category
+                            1)</h4>
+                        <h4 class="resume__organization">International Baccalaureate® (IB)</h4>
+                        <h5 class="resume__year">2020</h5>
+                        <h4 class="resume__location">📍Online</h4>
+                    </div>
+                </div>
+
+                <div class="resume__column">
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Differentiated Instruction Made Practical</h4>
+                        <h4 class="resume__organization">Harvard Graduate School of Education</h4>
+                        <h5 class="resume__year">2021</h5>
+                        <h4 class="resume__location">📍Online</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Neurobiology of Psychotherapy</h4>
+                        <h4 class="resume__organization">Moscow Institute of Gestalt and Psychodrama</h4>
+                        <h5 class="resume__year">2021</h5>
+                        <h4 class="resume__location">📍Moscow, Russia</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Solving Childhood Problems When Working with Adults</h4>
+                        <h4 class="resume__organization">Lynn Stadler at Moscow Institute of Gestalt and Psychodrama
+                        </h4>
+                        <h5 class="resume__year">2022</h5>
+                        <h4 class="resume__location">📍Moscow, Russia</h4>
+                    </div>
+
+                    <div class="resume__item">
+                        <h4 class="resume__sub-heading">Russian State Exam Expert</h4>
+                        <h4 class="resume__organization">Moscow Center for Quality of Education</h4>
+                        <h5 class="resume__year">2022</h5>
+                        <h4 class="resume__location">📍Moscow, Russia</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="resume__expander">
+        <div class="resume__expander-button">
+            <img class="resume__expander-svg" src="/arintseva-project/assets/circle-arrow-direction-download-down-svgrepo-com.3a6f4f4b.svg"
+                alt="arrow down">
+        </div>
+    </div>
+
+
+    <!-- English Teaching  -->
+    <section id="english" class="english">
+        <div class="section section--no-separator">
+            <div class="section__flex-container section--english-background">
+                <img class="section__picture section__flex-item" src="/arintseva-project/assets/mary_in_snow_1.16686586.jpg"
+                    alt="Round picture of Maria Arintseva lying in the snow">
+                <div class="section__text section__flex-item section--right-align">
+                    <h2 class="section__subheader">I teach English</h2>
+                    <h3 class="section__subsub">"It is important for me to create an atmosphere where fears and doubts
+                        give
+                        way to inspiration and motivation to reach your goals."</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container--left-align">
+            <p class="container__normal-text">I dreamed of becoming an English teacher (and for some reason that was
+                English)
+                since my 3rd grade at school. I remember coming home from school with my mom looking at the university
+                across the street and saying, "One day I will become an English teacher and will work at university
+                too."
+            </p>
+            <br>
+            <p class="container__normal-text">
+                That's exactly what happened later in my life: I entered Moscow State Linguistic University and
+                immediately began working as a tutor. After graduation I worked at several universities. Now, however, I
+                am working at a school, with talented and motivated teens. Teaching and languages are still a big and
+                important part of my life.
+            </p>
+            <br>
+            <p class="container__normal-text">Main areas of expertise: </p>
+            <ul class="container__normal-text">
+                <li>General English</li>
+                <li>Academic English</li>
+                <li>IELTS (General, Academic Modules)</li>
+                <li>Cambridge exams (KET, FCE, CAE)</li>
+                <li>Russian State Exams</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="gradient__english"> </div>
+
+    <!-- Psychology  -->
+    <section id="psychology" class="psychology">
+        <div class="section section--no-separator">
+            <div class="section__flex-container section--psychology-background">
+                <div class="section__text section__flex-item section--left-align">
+                    <h2 class="section__subheader">My journey from teaching English to psychology</h2>
+                    <h3 class="section__subsub">"In the beginning psychology was a hope for a
+                        better life for me."</h3>
+                </div>
+                <img class="section__picture section__flex-item" src="/arintseva-project/assets/mary_in_snow_2.5852afe6.jpg"
+                    alt="Round picture of Maria Arintseva standing in the snow">
+            </div>
+        </div>
+
+        <div class="container container--left-align">
+            <p class="container__normal-text">I have always been interested in psychology. Psychology was a hope for a
+                better life for me: I read books, attended seminars, watched YouTube, had sessions with various
+                psychologists
+                a couple of times (honestly, not all of these things were related to real psychology) and kept looking
+                for the magical key to solving all my problems! </p>
+            <br>
+            <p class="container__normal-text">During this journey I found my gestalt-psychotherapist. At that time, I
+                didn't know what the gestalt approach was all about or how it worked. I simply trusted the specialist
+                and began the work. I was working and the approach was working!</p>
+            <br>
+            <p class="container__normal-text">
+                Most of my life I worked at universities, and in 2019 I started working at a school as a teacher and a
+                tutor. The role of a tutor was absolutely new to me, so I started looking for some professional
+                development in this sphere.
+            </p>
+            <br>
+            <p class="container__normal-text">This is how I started my studies at Moscow Institute for Gestalt Therapy
+                and Psychodrama. Now I am already in my third year (the second stage) and I have even started my
+                practical part for future certification.</p>
+            <br>
+            <p class="container__normal-text">I am happy to share my journey as a teacher, mentor and future gestalt
+                therapist with you on this page and in real life!
+            </p>
+
+        </div>
+    </section>
+
+    <div class="gradient__psychology"> </div>
+
+    <!-- Contacts -->
+    <section id="contacts" class="contacts">
+        <div class="section">
+
+            <h2 class="section__subheader">Contact Me</h2>
+        </div>
+        <div class="container container--smaller-padding">
+            <div class="contacts__form">
+                <h3 class="contacts__title">Leave me a message</h3>
+                <form id="contact-form" class="form">
+                    <div class="form__group">
+                        <label for="name" class="form__label form--required">Name</label>
+                        <div class="form__input-group">
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label form--required">E-mail</label>
+                        <div class="form__input-group">
+                            <input type="email" id="email" name="email" class="form__input "
+                                placeholder="example@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone Number</label>
+                        <div class="form__input-group">
+                            <input type="text" id="phone" name="phone" class="form__input"
+                                placeholder="+7(916)123-45-67">
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="message" class="form__label form--required">Message</label>
+                        <div class="form__input-group">
+                            <textarea id="message" name="message" class="form__input" rows="6" maxlength="3000"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <input type="submit" id="form-button"
+                            class="form__button button button--smaller-margin button__text" value="Send">
+                    </div>
+                </form>
+            </div>
+
+
+            <h3 class="contacts__title">Or get in touch with me on Telegram</h3>
+            <h3 class="button button--medium-margin"><a href="https://t.me/happysummerberries" class="button__text"
+                    role="button">
+                    Telegram <i class="fa-brands fa-telegram button__logo"></i>
+                </a></h3>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            Designed and developed by <a href="https://t.me/krosengover">Pavel Degtyarev</a>
+        </div>
+    </footer>
+
+
+    <script src="resume-expander.js"></script>
+    <script src="navbar.js"></script>
+    <script src="mailer-en.js"></script>
+
+</body>
+
+</html>
