@@ -3,9 +3,11 @@
 [] read how to make the website accessible - adding some attributes 
 [] English and Russian versions, link rel canonical and alternate 
 
+19.01 
+[x] Fixed the issue where the contact form was submitted twice 
+
 18.01
 [x] Add padding-bottom to push down the collapser a little further below so that no text is covered with gradient 
-
 
 17.01
 [x] Prevent user from submitting the form multiple times
