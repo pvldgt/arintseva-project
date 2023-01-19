@@ -16,7 +16,7 @@ document.getElementById('contact-form')
     btn.disabled = true;
     btn.classList.add("button--disabled")
     // Change the value of the submit button to let the user now that their form is being submitted
-    btn.value = btnSending;
+    btn.value = "Отправляется...";
     // EmailJS data
     const serviceID = "service_s9wtj9u";
     const templateID = "template_x8hyl2s";
@@ -25,15 +25,15 @@ document.getElementById('contact-form')
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         // Change the value of the button back to the original and reset the form
-        btn.value = btnSend;
+        btn.value = "Отправить";
         this.reset();
         // Alert the user that the form has been submitted 
-        alert(emailSuccesMessage);
+        alert("✅ Ваше сообщение отправлено");
         // Enable the button again 
         btn.disabled = false;
         btn.classList.remove("button--disabled")
       }, (err) => {
-        btn.value = btnSend;
+        btn.value = "Отправить";
         this.reset();
         alert(JSON.stringify(err));
         // Enable the button again 
