@@ -4,6 +4,7 @@
 
 // Section styling 
 .section {
+
     @include mixins.section-title;
     padding: 1.5% 3.5%;
 
@@ -60,8 +61,8 @@
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
         @include responsive.small-screens {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
         }
     }
 
@@ -89,6 +90,19 @@
         &::before,
         &::after {
             content: " ";
+        }
+
+
+        .section__subheader {
+            @include responsive.small-screens {
+                font-size: 2rem;
+            }
+        }
+
+        .section__subsub {
+            @include responsive.small-screens {
+                font-size: 1rem;
+            }
         }
 
         @include responsive.small-screens {

@@ -6,7 +6,9 @@
     // Set the vh for the preview mode
     &--preview {
         height: 90vh;
-        overflow: hidden;
+        // Changed this to clip from hidden, because otherwise it interferes with "scroll-margin-top" 
+        // and the navbar blocks the section when "About me" is clicked from the menu
+        overflow: clip;
     }
 
     &__expander {

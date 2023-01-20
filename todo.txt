@@ -1,7 +1,11 @@
 [] make the focused element stand out somehow, style it according to the general design color palette etc
 [] each of the link should get highlighted depending on where the user scrolls
 [] read how to make the website accessible - adding some attributes 
-[] English and Russian versions, link rel canonical and alternate 
+
+20.01 
+[x] one js with lang attr
+[x] when click a link the view lands a little further up so that no section part is cut 
+[x] on mobile the card (english and psychology) should be smaller
 
 19.01 
 [x] Fixed the issue where the contact form was submitted twice 
